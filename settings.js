@@ -24,7 +24,7 @@ global.mayers = ["51939260696"]
 
 global.libreria = "Baileys Multi Device"
 global.vs = "^1.3"
-global.nameqr = "『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』"
+global.nameqr = "sʜɪɴᴏʙᴜ - ʙᴏᴛ"
 global.sessions = "Sessions/Principal"
 global.jadi = "Sessions/SubBot"
 global.AstaJadibts = true
@@ -37,11 +37,11 @@ global.sinprefix = false
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.prefix = new RegExp('^[#!./-]?')
-global.botname = "『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』"
-global.textbot = "『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』 • Powered By 𝕱𝖊𝖗𝖓𝖆𝖓𝖉𝖔"
-global.dev = "Powered By 𝕱𝖊𝖗𝖓𝖆𝖓𝖉𝖔"
-global.author = "『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』 • Powered By 𝕱𝖊𝖗𝖓𝖆𝖓𝖉𝖔"
-global.etiqueta = "𝕱𝖊𝖗𝖓𝖆𝖓𝖉𝖔"
+global.botname = "sʜɪɴᴏʙᴜ - ʙᴏᴛ"
+global.textbot = "sʜɪɴᴏʙᴜ - ʙᴏᴛ • Powered By ᴍᴀʏᴇʀs"
+global.dev = "Powered By ᴍᴀʏᴇʀs"
+global.author = "sʜɪɴᴏʙᴜ - ʙᴏᴛ • Powered By ᴍᴀʏᴇʀs"
+global.etiqueta = "ᴍᴀʏᴇʀs"
 global.currency = "¥enes"
 global.banner = "https://github.com/Fer280809/Asta_bot/blob/main/lib%2Fcatalogo.jpg"
 global.icono = "https://github.com/Fer280809/Asta_bot/blob/main/lib%2Fcatalogo.jpg"
