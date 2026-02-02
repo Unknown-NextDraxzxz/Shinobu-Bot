@@ -12,14 +12,14 @@ let handler = async (m, { conn, usedPrefix }) => {
 ╰─━━━━━━━━━━━━━━━─╯
 
 ╭─═⊰ 📡 𝐄𝐒𝐓𝐀𝐃𝐎 𝐀𝐂𝐓𝐈𝐕𝐎
-│ 🤖 Estado: ${(conn.user.jid == global.conn.user.jid ? '🟢 PREMIUM' : '🔗 prem-ʙᴏᴛ')}
-│ 👥 Users: 『${totalreg.toLocaleString()}』🔥
-│ 🛠️ Comandos: 『${totalCommands}』⚙️
-│ 📅 Librería » ${libreria}
-│ 🌍 Servidor: México 🇲🇽
-│ 📡 Ping: Online ✅
-│ 💾 Version: ${vs}
-│ 🔒 Modo: ${(conn.user.jid == global.conn.user.jid ? '🔐 PRIVADO' : '🔓 PUBLICO')}
+│ ➣ Estado: ${(conn.user.jid == global.conn.user.jid ? '🟢 PREMIUM' : '🔗 prem-ʙᴏᴛ')}
+│ ➢ Users: 『${totalreg.toLocaleString()}』🔥
+│ ➣ Comandos: 『${totalCommands}』⚙️
+│ ➢ Librería » ${libreria}
+│ ➣ Servidor: México 🇲🇽
+│ ➢ Ping: Online ✅
+│ ➣ Version: ${vs}
+│ ➢ Modo: ${(conn.user.jid == global.conn.user.jid ? '🔐 PRIVADO' : '🔓 PUBLICO')}
 ╰───────────────╯
 
 *Creador 𝕱𝖊𝖗𝖓𝖆𝖓𝖉𝖔 👑*
