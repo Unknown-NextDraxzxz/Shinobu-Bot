@@ -22,7 +22,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 │ ➢ Modo: ${(conn.user.jid == global.conn.user.jid ? 'Privado' : 'Publico')}
 ╰───────────────╯
 
-*Creador 𝕱𝖊𝖗𝖓𝖆𝖓𝖉𝖔 👑*
+*𝖢𝗋𝖾𝖺𝖽𝗈𝗋┆𝖬𝖺𝗒𝖾𝗋𝗌*
 Selecciona una opción:`;
 
   let buttons = [
