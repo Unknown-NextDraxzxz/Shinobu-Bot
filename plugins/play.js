@@ -27,13 +27,14 @@ const savenowApi = {
     key: "dfcb6d76f2f6a9894gjkege8a4ab232222",
     agent: "Mozilla/5.0 (Android 13; Mobile; rv:146.0) Gecko/146.0 Firefox/146.0",
     referer: "https://y2down.cc/enSB/",
-    
+
     ytdl: async function(url, format) {
         try {
-            const initUrl = `https://p.savenow.to/ajax/download.php?copyright=0&format=${format}&url=${encodeURIComponent(url)}&api=${this.key}`;
-            
+            // CAMBIO: Se añadió &allow_extended_duration=1 para permitir videos largos/películas
+            const initUrl = `https://p.savenow.to/ajax/download.php?copyright=0&format=${format}&url=${encodeURIComponent(url)}&api=${this.key}&allow_extended_duration=1`;
+
             console.log(`📡 Iniciando descarga con formato: ${format}`);
-            
+
             const init = await fetch(initUrl, {
                 headers: {
                     "User-Agent": this.agent,
@@ -42,7 +43,7 @@ const savenowApi = {
             });
 
             const data = await init.json();
-            
+
             if (!data.success) {
                 return { error: data.message || "Failed to start download" };
             }
@@ -50,23 +51,24 @@ const savenowApi = {
             const id = data.id;
             const progressUrl = `https://p.savenow.to/api/progress?id=${id}`;
             let attempts = 0;
-            const maxAttempts = 30;
-            
+            // CAMBIO: Aumentado de 30 a 150 intentos porque las películas tardan mucho en procesar
+            const maxAttempts = 150; 
+
             while (attempts < maxAttempts) {
-                await new Promise(resolve => setTimeout(resolve, 2000));
+                await new Promise(resolve => setTimeout(resolve, 3000)); // Espera de 3 segundos entre intentos
                 attempts++;
-                
+
                 console.log(`⏳ Verificando progreso... (${attempts}/${maxAttempts})`);
-                
+
                 const response = await fetch(progressUrl, {
                     headers: {
                         "User-Agent": this.agent,
                         "Referer": this.referer
                     }
                 });
-                
+
                 const status = await response.json();
-                
+
                 if (status.progress === 1000) {
                     console.log(`✅ Progreso completado!`);
                     return {
@@ -77,56 +79,56 @@ const savenowApi = {
                         alternatives: status.alternative_download_urls || []
                     };
                 }
-                
+
                 console.log(`📊 Progreso actual: ${status.progress / 10}%`);
             }
 
-            return { error: "Timeout waiting for download" };
+            return { error: "Timeout: La película es muy pesada y tardó demasiado en procesarse. Intenta de nuevo." };
         } catch (error) {
             console.error("Error en ytdl:", error.message);
             return { error: error.message };
         }
     },
-    
+
     download: async function(link, type = "audio") {
         try {
             const videoId = link.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/)?.[1];
             if (!videoId) {
                 return { status: false, error: "ID de video no válido" };
             }
-            
+
             const videoInfo = await yts({ videoId: videoId });
-            
+
             let format, result;
-            
+
             if (type === "audio") {
                 format = "mp3";
                 result = await this.ytdl(link, format);
-                
+
                 if (result.error) {
                     console.log(`❌ MP3 falló, intentando M4A...`);
                     result = await this.ytdl(link, "m4a");
                 }
             } else {
                 const videoFormats = ["720", "360", "480", "240", "144", "1080"];
-                
+
                 for (const format of videoFormats) {
                     console.log(`🎬 Intentando video en ${format}p...`);
                     result = await this.ytdl(link, format);
-                    
+
                     if (!result.error) {
                         console.log(`✅ Video encontrado en ${format}p`);
                         break;
                     }
-                    
+
                     console.log(`❌ ${format}p no disponible`);
                 }
             }
-            
+
             if (result.error) {
                 return { status: false, error: result.error };
             }
-            
+
             return {
                 status: true,
                 result: {
@@ -151,16 +153,16 @@ const savenowApi = {
 const amScraperApi = {
     name: "AM Scraper API",
     baseUrl: "https://scrapers.hostrta.win/scraper/24",
-    
+
     download: async (link, type = "audio") => {
         try {
             const videoId = link.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/)?.[1];
             if (!videoId) {
                 return { status: false, error: "ID de video no válido" };
             }
-            
+
             const videoInfo = await yts({ videoId: videoId });
-            
+
             const response = await axios.get(`${amScraperApi.baseUrl}?url=${encodeURIComponent(link)}`, {
                 headers: {
                     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
@@ -169,15 +171,15 @@ const amScraperApi = {
                 },
                 timeout: 15000
             });
-            
+
             if (!response.data || response.data.error) {
                 return { status: false, error: response.data?.error || "Error en AM Scraper" };
             }
-            
+
             const data = response.data;
             let downloadUrl = null;
             let formatType = null;
-            
+
             if (type === "audio") {
                 if (data.audio && data.audio.url) {
                     downloadUrl = data.audio.url;
@@ -195,20 +197,20 @@ const amScraperApi = {
                     formatType = "mp4";
                 } else if (data.formats) {
                     const qualityOrder = ["720", "480", "360", "240"];
-                    
+
                     for (const quality of qualityOrder) {
                         const videoFormat = data.formats.find(f => 
                             f.quality === `${quality}p` || 
                             (f.mimeType && f.mimeType.includes('video/mp4') && f.qualityLabel === `${quality}p`)
                         );
-                        
+
                         if (videoFormat) {
                             downloadUrl = videoFormat.url;
                             formatType = "mp4";
                             break;
                         }
                     }
-                    
+
                     if (!downloadUrl) {
                         const anyVideo = data.formats.find(f => 
                             f.mimeType && f.mimeType.includes('video/mp4')
@@ -218,11 +220,11 @@ const amScraperApi = {
                     }
                 }
             }
-            
+
             if (!downloadUrl) {
                 return { status: false, error: "Formato no disponible en AM Scraper" };
             }
-            
+
             return {
                 status: true,
                 result: {
@@ -249,20 +251,20 @@ const amScraperApi = {
 const backupApi = {
     name: "YouTube Downloader API",
     baseUrl: "https://youtube-downloader-api.vercel.app",
-    
+
     download: async (link, type = "audio") => {
         try {
             const response = await axios.get(`${backupApi.baseUrl}/info?url=${encodeURIComponent(link)}`, {
                 timeout: 10000
             });
-            
+
             if (!response.data || !response.data.success) {
                 return { status: false, error: "No se pudo obtener información" };
             }
-            
+
             const videoInfo = response.data.data;
             let downloadUrl = null;
-            
+
             if (type === "audio") {
                 const audioFormats = videoInfo.formats.filter(f => 
                     f.mimeType && f.mimeType.includes('audio') && f.hasAudio
@@ -277,11 +279,11 @@ const backupApi = {
                                  videoInfo.formats.find(f => f.hasVideo && f.hasAudio);
                 downloadUrl = bestVideo?.url;
             }
-            
+
             if (!downloadUrl) {
                 return { status: false, error: "Formato no disponible" };
             }
-            
+
             return {
                 status: true,
                 result: {
@@ -306,30 +308,30 @@ const backupApi = {
 // Función principal de descarga con fallback
 async function downloadWithFallback(url, type = 'audio') {
     console.log(`🔍 Intentando descargar: ${url}`);
-    
+
     console.log(`🔄 Intentando con Savenow API...`);
     let result = await savenowApi.download(url, type);
     if (result.status) {
         console.log(`✅ Descarga exitosa con Savenow API`);
         return result;
     }
-    
+
     console.log(`❌ Savenow API falló: ${result.error}, intentando AM Scraper...`);
-    
+
     result = await amScraperApi.download(url, type);
     if (result.status) {
         console.log(`✅ Descarga exitosa con AM Scraper API`);
         return result;
     }
-    
+
     console.log(`❌ AM Scraper falló: ${result.error}, intentando API de respaldo...`);
-    
+
     result = await backupApi.download(url, type);
     if (result.status) {
         console.log(`✅ Descarga exitosa con Backup API`);
         return result;
     }
-    
+
     console.log(`❌ Todas las APIs fallaron`);
     return {
         status: false,
@@ -460,7 +462,7 @@ async function handleDownload(m, conn, text, command, usedPrefix) {
             if (!id) throw '❌ URL inválida';
 
             const search = await yts({ videoId: id });
-            url = `https://www.youtube.com/watch?v=${id}`;
+            url = text;
             title = search.title || "Sin título";
             thumbnail = search.thumbnail;
             author = search.author?.name || "Desconocido";
@@ -511,14 +513,10 @@ async function handleDownload(m, conn, text, command, usedPrefix) {
                 }
             };
 
-            // NUEVA ESTRATEGIA: Enviar siempre como AUDIO NORMAL (no PTT, no documento)
-            // Esto garantiza que sea reproducible directamente en WhatsApp
             await conn.sendMessage(m.chat, {
                 audio: { url: dl.result.download },
                 mimetype: 'audio/mpeg',
                 fileName: `${title}.mp3`,
-                // NO usar ptt: true
-                // Esto hace que se envíe como mensaje de audio reproducible
             }, { quoted: fkontak });
 
             console.log('✅ Audio enviado como mensaje reproducible');
@@ -589,8 +587,6 @@ async function handleDownload(m, conn, text, command, usedPrefix) {
             const dl = await downloadWithFallback(url, 'audio');
             if (!dl.status) throw dl.error || '❌ Error al descargar';
 
-            const size = await getSize(dl.result.download);
-
             const fkontak = {
                 key: { fromMe: false, participant: "0@s.whatsapp.net" },
                 message: {
@@ -633,8 +629,8 @@ async function handleDownload(m, conn, text, command, usedPrefix) {
 
             const size = await getSize(dl.result.download);
 
-            if (size > 600 * 1024 * 1024) {
-                throw `📦 Video muy grande (${formatSize(size)}).\n\n⚠️ El archivo supera los 600 MB, no puedo enviarlo.`;
+            if (size > 900 * 1024 * 1024) { // Subí el límite a 900 MB por si la película es pesada
+                throw `📦 Video muy grande (${formatSize(size)}).\n\n⚠️ El archivo supera los 900 MB, no puedo enviarlo por WhatsApp.`;
             }
 
             const fkontak = {
