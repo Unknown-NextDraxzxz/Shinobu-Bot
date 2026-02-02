@@ -42,7 +42,7 @@ Selecciona una opción:`;
     await conn.sendMessage(m.chat, {
       image: { url: mediaUrl },
       caption: infoText,
-      footer: "『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』⚡",
+      footer: "𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍",
       buttons: buttons,
       headerType: 4,
       mentions: [userId]
@@ -51,7 +51,7 @@ Selecciona una opción:`;
     // Si falla, envía sin imagen (método alternativo)
     let buttonMessage = {
       text: infoText,
-      footer: "『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』⚡",
+      footer: "𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍",
       buttons: buttons,
       headerType: 1,
       mentions: [userId]
