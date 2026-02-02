@@ -112,7 +112,7 @@ END:VCARD`.trim();
       
       owners.forEach((owner, index) => {
         listaOwners += `┃ *${index + 1}.* ${owner.name} - ${owner.role}\n`;
-        listaOwners += `┃   📞 +${owner.number}\n`;
+        listaOwners += `┃   ✎ +${owner.number}\n`;
         if (index < owners.length - 1) listaOwners += `┃   ───────────\n`;
       });
       
