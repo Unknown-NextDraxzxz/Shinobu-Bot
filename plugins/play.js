@@ -9,7 +9,7 @@ import path, { dirname } from "path"
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
-const MAX_FILE_SIZE = 500 * 1024 * 1024 // 500 MB
+const MAX_FILE_SIZE = 1000 * 1024 * 1024 // 1 GB para permitir películas
 const AUDIO_DOC_THRESHOLD = 30 * 1024 * 1024 // 30 MB
 
 async function resizeImage(buffer, size = 300) {
@@ -30,7 +30,7 @@ const savenowApi = {
 
     ytdl: async function(url, format) {
         try {
-            // CAMBIO: Se añadió &allow_extended_duration=1 para permitir videos largos/películas
+            // FIX 1: Se añadió &allow_extended_duration=1
             const initUrl = `https://p.savenow.to/ajax/download.php?copyright=0&format=${format}&url=${encodeURIComponent(url)}&api=${this.key}&allow_extended_duration=1`;
 
             console.log(`📡 Iniciando descarga con formato: ${format}`);
@@ -51,11 +51,10 @@ const savenowApi = {
             const id = data.id;
             const progressUrl = `https://p.savenow.to/api/progress?id=${id}`;
             let attempts = 0;
-            // CAMBIO: Aumentado de 30 a 150 intentos porque las películas tardan mucho en procesar
-            const maxAttempts = 150; 
+            const maxAttempts = 150; // Más intentos para videos largos
 
             while (attempts < maxAttempts) {
-                await new Promise(resolve => setTimeout(resolve, 3000)); // Espera de 3 segundos entre intentos
+                await new Promise(resolve => setTimeout(resolve, 3000));
                 attempts++;
 
                 console.log(`⏳ Verificando progreso... (${attempts}/${maxAttempts})`);
@@ -71,19 +70,22 @@ const savenowApi = {
 
                 if (status.progress === 1000) {
                     console.log(`✅ Progreso completado!`);
+                    // FIX 2: Validar que el link exista
+                    const dLink = status.download_url || (status.alternative_download_urls && status.alternative_download_urls[0]);
+                    if (!dLink) return { error: "No se encontró enlace de descarga final" };
+
                     return {
-                        title: data.title || data.info?.title,
+                        title: data.title || data.info?.title || "Video",
                         image: data.info?.image,
                         video: data.info?.title,
-                        link: status.download_url,
-                        alternatives: status.alternative_download_urls || []
+                        link: dLink
                     };
                 }
 
                 console.log(`📊 Progreso actual: ${status.progress / 10}%`);
             }
 
-            return { error: "Timeout: La película es muy pesada y tardó demasiado en procesarse. Intenta de nuevo." };
+            return { error: "Timeout waiting for download" };
         } catch (error) {
             console.error("Error en ytdl:", error.message);
             return { error: error.message };
@@ -93,9 +95,7 @@ const savenowApi = {
     download: async function(link, type = "audio") {
         try {
             const videoId = link.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/)?.[1];
-            if (!videoId) {
-                return { status: false, error: "ID de video no válido" };
-            }
+            if (!videoId) return { status: false, error: "ID de video no válido" };
 
             const videoInfo = await yts({ videoId: videoId });
 
@@ -104,569 +104,185 @@ const savenowApi = {
             if (type === "audio") {
                 format = "mp3";
                 result = await this.ytdl(link, format);
-
-                if (result.error) {
-                    console.log(`❌ MP3 falló, intentando M4A...`);
-                    result = await this.ytdl(link, "m4a");
-                }
+                if (result.error) result = await this.ytdl(link, "m4a");
             } else {
-                const videoFormats = ["720", "360", "480", "240", "144", "1080"];
-
-                for (const format of videoFormats) {
-                    console.log(`🎬 Intentando video en ${format}p...`);
-                    result = await this.ytdl(link, format);
-
-                    if (!result.error) {
-                        console.log(`✅ Video encontrado en ${format}p`);
-                        break;
-                    }
-
-                    console.log(`❌ ${format}p no disponible`);
+                const videoFormats = ["720", "360", "480", "240", "144"];
+                for (const f of videoFormats) {
+                    console.log(`🎬 Intentando video en ${f}p...`);
+                    result = await this.ytdl(link, f);
+                    if (!result.error) break;
                 }
             }
 
-            if (result.error) {
-                return { status: false, error: result.error };
-            }
+            if (!result || result.error) return { status: false, error: result?.error || "Error desconocido" };
 
             return {
                 status: true,
                 result: {
                     title: result.title || videoInfo.title || "Sin título",
-                    author: videoInfo.author?.name || "Desconocido",
-                    views: videoInfo.views || "0",
-                    timestamp: videoInfo.timestamp || "0:00",
-                    ago: videoInfo.ago || "Desconocido",
                     format: type === "audio" ? "mp3" : "mp4",
                     download: result.link,
                     thumbnail: result.image || videoInfo.thumbnail || `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
                 }
             };
         } catch (error) {
-            console.error("Savenow API Error:", error.message);
             return { status: false, error: error.message };
         }
     }
 };
 
-// =================== API AM SCRAPER ===================
+// =================== OTRAS APIS (Restauradas) ===================
 const amScraperApi = {
     name: "AM Scraper API",
     baseUrl: "https://scrapers.hostrta.win/scraper/24",
-
     download: async (link, type = "audio") => {
         try {
             const videoId = link.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/)?.[1];
-            if (!videoId) {
-                return { status: false, error: "ID de video no válido" };
-            }
-
+            if (!videoId) return { status: false, error: "ID inválido" };
             const videoInfo = await yts({ videoId: videoId });
+            const response = await axios.get(`${amScraperApi.baseUrl}?url=${encodeURIComponent(link)}`, { timeout: 15000 });
+            if (!response.data || response.data.error) return { status: false, error: "Error en AM" };
+            
+            let downloadUrl = type === "audio" ? response.data.audio?.url : response.data.video?.url;
+            if (!downloadUrl) return { status: false, error: "No URL" };
 
-            const response = await axios.get(`${amScraperApi.baseUrl}?url=${encodeURIComponent(link)}`, {
-                headers: {
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-                    'Accept': 'application/json',
-                    'Referer': 'https://scrapers.hostrta.win/'
-                },
-                timeout: 15000
-            });
-
-            if (!response.data || response.data.error) {
-                return { status: false, error: response.data?.error || "Error en AM Scraper" };
-            }
-
-            const data = response.data;
-            let downloadUrl = null;
-            let formatType = null;
-
-            if (type === "audio") {
-                if (data.audio && data.audio.url) {
-                    downloadUrl = data.audio.url;
-                    formatType = "mp3";
-                } else if (data.formats) {
-                    const audioFormat = data.formats.find(f => 
-                        f.mimeType && (f.mimeType.includes('audio/mp4') || f.mimeType.includes('audio/mpeg'))
-                    );
-                    downloadUrl = audioFormat?.url;
-                    formatType = "mp3";
-                }
-            } else {
-                if (data.video && data.video.url) {
-                    downloadUrl = data.video.url;
-                    formatType = "mp4";
-                } else if (data.formats) {
-                    const qualityOrder = ["720", "480", "360", "240"];
-
-                    for (const quality of qualityOrder) {
-                        const videoFormat = data.formats.find(f => 
-                            f.quality === `${quality}p` || 
-                            (f.mimeType && f.mimeType.includes('video/mp4') && f.qualityLabel === `${quality}p`)
-                        );
-
-                        if (videoFormat) {
-                            downloadUrl = videoFormat.url;
-                            formatType = "mp4";
-                            break;
-                        }
-                    }
-
-                    if (!downloadUrl) {
-                        const anyVideo = data.formats.find(f => 
-                            f.mimeType && f.mimeType.includes('video/mp4')
-                        );
-                        downloadUrl = anyVideo?.url;
-                        formatType = "mp4";
-                    }
-                }
-            }
-
-            if (!downloadUrl) {
-                return { status: false, error: "Formato no disponible en AM Scraper" };
-            }
-
-            return {
-                status: true,
-                result: {
-                    title: videoInfo.title || data.title || "Sin título",
-                    author: videoInfo.author?.name || data.author || "Desconocido",
-                    views: videoInfo.views || data.views || "0",
-                    timestamp: videoInfo.timestamp || data.duration || "0:00",
-                    ago: videoInfo.ago || data.uploadDate || "Desconocido",
-                    format: formatType || (type === "audio" ? "mp3" : "mp4"),
-                    download: downloadUrl,
-                    thumbnail: videoInfo.thumbnail || 
-                             data.thumbnail || 
-                             `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
-                }
-            };
-        } catch (error) {
-            console.error("AM Scraper API Error:", error.message);
-            return { status: false, error: error.message };
-        }
+            return { status: true, result: { title: videoInfo.title, download: downloadUrl, format: type === "audio" ? "mp3" : "mp4", thumbnail: videoInfo.thumbnail }};
+        } catch (e) { return { status: false, error: e.message }; }
     }
 };
 
-// =================== API de respaldo ===================
 const backupApi = {
-    name: "YouTube Downloader API",
+    name: "Backup API",
     baseUrl: "https://youtube-downloader-api.vercel.app",
-
     download: async (link, type = "audio") => {
         try {
-            const response = await axios.get(`${backupApi.baseUrl}/info?url=${encodeURIComponent(link)}`, {
-                timeout: 10000
-            });
-
-            if (!response.data || !response.data.success) {
-                return { status: false, error: "No se pudo obtener información" };
-            }
-
+            const response = await axios.get(`${backupApi.baseUrl}/info?url=${encodeURIComponent(link)}`, { timeout: 10000 });
+            if (!response.data?.success) return { status: false, error: "API error" };
             const videoInfo = response.data.data;
-            let downloadUrl = null;
-
-            if (type === "audio") {
-                const audioFormats = videoInfo.formats.filter(f => 
-                    f.mimeType && f.mimeType.includes('audio') && f.hasAudio
-                );
-                const bestAudio = audioFormats.sort((a, b) => b.bitrate - a.bitrate)[0];
-                downloadUrl = bestAudio?.url;
-            } else {
-                const videoFormats = videoInfo.formats.filter(f => 
-                    f.hasVideo && f.hasAudio && (f.qualityLabel === "720p" || f.qualityLabel === "480p")
-                );
-                const bestVideo = videoFormats[0] || 
-                                 videoInfo.formats.find(f => f.hasVideo && f.hasAudio);
-                downloadUrl = bestVideo?.url;
-            }
-
-            if (!downloadUrl) {
-                return { status: false, error: "Formato no disponible" };
-            }
-
-            return {
-                status: true,
-                result: {
-                    title: videoInfo.title || "Sin título",
-                    author: videoInfo.author?.name || "Desconocido",
-                    views: videoInfo.viewCount || "0",
-                    timestamp: videoInfo.lengthSeconds || 0,
-                    ago: videoInfo.uploadDate || "Desconocido",
-                    format: type === "audio" ? "mp3" : "mp4",
-                    download: downloadUrl,
-                    thumbnail: videoInfo.thumbnails?.[videoInfo.thumbnails.length - 1]?.url || 
-                              `https://i.ytimg.com/vi/${videoInfo.videoId}/hqdefault.jpg`
-                }
-            };
-        } catch (error) {
-            console.error("Backup API Error:", error.message);
-            return { status: false, error: error.message };
-        }
+            let downloadUrl = type === "audio" ? videoInfo.formats.find(f => f.hasAudio && !f.hasVideo)?.url : videoInfo.formats.find(f => f.hasVideo && f.hasAudio)?.url;
+            return { status: true, result: { title: videoInfo.title, download: downloadUrl, format: type === "audio" ? "mp3" : "mp4", thumbnail: videoInfo.thumbnails?.[0]?.url }};
+        } catch (e) { return { status: false, error: e.message }; }
     }
 };
 
-// Función principal de descarga con fallback
 async function downloadWithFallback(url, type = 'audio') {
-    console.log(`🔍 Intentando descargar: ${url}`);
-
-    console.log(`🔄 Intentando con Savenow API...`);
     let result = await savenowApi.download(url, type);
-    if (result.status) {
-        console.log(`✅ Descarga exitosa con Savenow API`);
-        return result;
-    }
-
-    console.log(`❌ Savenow API falló: ${result.error}, intentando AM Scraper...`);
-
+    if (result.status) return result;
     result = await amScraperApi.download(url, type);
-    if (result.status) {
-        console.log(`✅ Descarga exitosa con AM Scraper API`);
-        return result;
-    }
-
-    console.log(`❌ AM Scraper falló: ${result.error}, intentando API de respaldo...`);
-
-    result = await backupApi.download(url, type);
-    if (result.status) {
-        console.log(`✅ Descarga exitosa con Backup API`);
-        return result;
-    }
-
-    console.log(`❌ Todas las APIs fallaron`);
-    return {
-        status: false,
-        error: "No se pudo descargar el contenido. Intenta con otro video o prueba más tarde."
-    };
+    if (result.status) return result;
+    return await backupApi.download(url, type);
 }
 
 function formatSize(bytes) {
-    if (!bytes || isNaN(bytes)) return 'Desconocido';
+    if (!bytes) return 'Desconocido';
     const units = ['B', 'KB', 'MB', 'GB'];
     let i = 0;
-    bytes = Number(bytes);
-    while (bytes >= 1024 && i < units.length - 1) {
-        bytes /= 1024;
-        i++;
-    }
+    while (bytes >= 1024 && i < units.length - 1) { bytes /= 1024; i++; }
     return `${bytes.toFixed(2)} ${units[i]}`;
 }
 
 async function getSize(url) {
     try {
-        const res = await axios.head(url, {
-            timeout: 10000,
-            headers: { 
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-                'Accept': '*/*',
-                'Accept-Language': 'en-US,en;q=0.9',
-                'Accept-Encoding': 'gzip, deflate, br',
-                'Connection': 'keep-alive'
-            }
-        });
+        const res = await axios.head(url, { timeout: 10000 });
         return parseInt(res.headers['content-length'], 10) || 0;
-    } catch {
-        return 0;
-    }
+    } catch { return 0; }
 }
 
 const handler = async (m, { conn, text, usedPrefix, command }) => {
-    // Si es comando de descarga directa
     if (['ytmp3', 'ytmp4', 'ytmp3doc', 'ytmp4doc'].includes(command)) {
         return await handleDownload(m, conn, text, command, usedPrefix);
     }
 
-    // Comando play principal
     if (!text?.trim()) {
-        return conn.reply(m.chat, `❗ Ingresa el nombre de una canción o video.\n\n📝 Ejemplo: *${usedPrefix + command} Bad Bunny Tití Me Preguntó*`, m);
+        return conn.reply(m.chat, `❗ Ingresa el nombre de una canción o video.\n\n📝 Ejemplo: *${usedPrefix + command} Bad Bunny*`, m);
     }
 
     await m.react('🔍');
-
     try {
         const search = await yts(text);
-        const videoInfo = search.all?.[0];
+        const video = search.all?.[0];
+        if (!video) throw '❗ No se encontraron resultados.';
 
-        if (!videoInfo) {
-            throw '❗ No se encontraron resultados.';
-        }
-
-        const { title, thumbnail, timestamp, views, ago, url, author } = videoInfo;
-        const vistas = views?.toLocaleString?.() || 'Desconocido';
-
-        const cleanTitle = title.substring(0, 100);
-        const cleanAuthor = author.name.substring(0, 50);
-
-        const body = `╭━━━━━━━━━━━━━╮
-│ 🎵 *YouTube Play*
-╰━━━━━━━━━━━━━╯
-
-📹 *${cleanTitle}*
-
-👤 Canal: ${cleanAuthor}
-👁️ Vistas: ${vistas}
-⏱️ Duración: ${timestamp}
-📅 Publicado: ${ago}
-🔗 Link: ${url}
-
-*Elige una opción:*`;
+        const body = `╭━━━━━━━━━━━━━╮\n│ 🎵 *YouTube Play*\n╰━━━━━━━━━━━━━╯\n\n📹 *${video.title}*\n\n👤 Canal: ${video.author.name}\n⏱️ Duración: ${video.timestamp}\n🔗 Link: ${video.url}\n\n*Elige una opción:*`;
 
         const buttons = [
-            { buttonId: `${usedPrefix}ytmp3 ${url}`, buttonText: { displayText: '🎧 Audio' } },
-            { buttonId: `${usedPrefix}ytmp4 ${url}`, buttonText: { displayText: '📽️ Video' } },
-            { buttonId: `${usedPrefix}ytmp3doc ${url}`, buttonText: { displayText: '💿 Audio Doc' } },
-            { buttonId: `${usedPrefix}ytmp4doc ${url}`, buttonText: { displayText: '🎥 Video Doc' } }
+            { buttonId: `${usedPrefix}ytmp3 ${video.url}`, buttonText: { displayText: '🎧 Audio' } },
+            { buttonId: `${usedPrefix}ytmp4 ${video.url}`, buttonText: { displayText: '📽️ Video' } },
+            { buttonId: `${usedPrefix}ytmp3doc ${video.url}`, buttonText: { displayText: '💿 Audio Doc' } },
+            { buttonId: `${usedPrefix}ytmp4doc ${video.url}`, buttonText: { displayText: '🎥 Video Doc' } }
         ];
 
-        try {
-            await conn.sendMessage(m.chat, {
-                image: { url: thumbnail },
-                caption: body,
-                footer: `『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』⚡`,
-                buttons: buttons,
-                viewOnce: true,
-                headerType: 4
-            }, { quoted: m });
-        } catch (e1) {
-            try {
-                await conn.sendButton(m.chat, body, `『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』⚡`, thumbnail, buttons, m);
-            } catch (e2) {
-                try {
-                    await conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', body + `\n\n*Comandos disponibles:*\n• ${usedPrefix}ytmp3 ${url}\n• ${usedPrefix}ytmp4 ${url}\n• ${usedPrefix}ytmp3doc ${url}\n• ${usedPrefix}ytmp4doc ${url}`, m);
-                } catch (e3) {
-                    await conn.reply(m.chat, body + `\n\n*Usa estos comandos:*\n• ${usedPrefix}ytmp3 ${url}\n• ${usedPrefix}ytmp4 ${url}\n• ${usedPrefix}ytmp3doc ${url}\n• ${usedPrefix}ytmp4doc ${url}`, m);
-                }
-            }
-        }
+        await conn.sendMessage(m.chat, {
+            image: { url: video.thumbnail },
+            caption: body,
+            footer: `『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』⚡`,
+            buttons: buttons,
+            headerType: 4
+        }, { quoted: m });
 
         await m.react('✅');
-
     } catch (e) {
         await m.react('❌');
-        return conn.reply(m.chat, typeof e === 'string' ? e : `⚠️ Error: ${e.message}`, m);
+        return conn.reply(m.chat, `⚠️ Error: ${e.message || e}`, m);
     }
 };
 
 async function handleDownload(m, conn, text, command, usedPrefix) {
-    if (!text?.trim()) {
-        return conn.reply(m.chat, `❌ Ingresa una URL o nombre.\n\n📝 Ejemplo: *${usedPrefix + command} Bad Bunny*`, m);
-    }
-
+    if (!text?.trim()) return;
     await m.react('⏳');
 
     try {
-        let url, title, thumbnail, author;
+        const id = text.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/)?.[1];
+        if (!id) throw '❌ URL inválida';
 
-        // Si es URL directa
-        if (/youtube.com|youtu.be/.test(text)) {
-            const id = text.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/)?.[1];
-            if (!id) throw '❌ URL inválida';
+        const search = await yts({ videoId: id });
+        // FIX 3: Limpiar el título para evitar error toString de Baileys
+        const rawTitle = search.title || "video";
+        const title = rawTitle.replace(/[^\w\s]/gi, '').substring(0, 50); 
+        const thumbnail = search.thumbnail;
 
-            const search = await yts({ videoId: id });
-            url = text;
-            title = search.title || "Sin título";
-            thumbnail = search.thumbnail;
-            author = search.author?.name || "Desconocido";
+        await conn.reply(m.chat, `╭━━━━━━━━━━━━━╮\n│ ⏳ *DESCARGANDO...*\n╰━━━━━━━━━━━━━╯\n\n📹 *${rawTitle}*\n\n📄 _Formato: ${command.includes('doc') ? 'Documento' : 'Multimedia'}_\n⚡ _Procesando..._\n\n*『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』*`, m);
 
-        } else {
-            // Si es búsqueda
-            const search = await yts(text);
-            if (!search.videos.length) throw "❌ No se encontraron resultados";
+        const type = command.includes('mp4') ? 'video' : 'audio';
+        const dl = await downloadWithFallback(text, type);
 
-            const videoInfo = search.videos[0];
-            url = videoInfo.url;
-            title = videoInfo.title;
-            thumbnail = videoInfo.thumbnail;
-            author = videoInfo.author?.name || "Desconocido";
-        }
+        if (!dl.status || !dl.result.download) throw dl.error || '❌ Error al descargar';
 
-        console.log(`🎯 Descargando: ${title}`);
-
+        const size = await getSize(dl.result.download);
         const thumbResized = await resizeImage(await (await fetch(thumbnail)).buffer(), 300);
 
-        // ========== YTMP3 - ENVIAR SIEMPRE COMO AUDIO REPRODUCIBLE ==========
-        if (command === 'ytmp3') {
-            await conn.reply(m.chat, `╭━━━━━━━━━━━━━╮
-│ ⏳ *DESCARGANDO...*
-╰━━━━━━━━━━━━━╯
+        const fkontak = { key: { fromMe: false, participant: "0@s.whatsapp.net" }, message: { documentMessage: { title: `『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』`, jpegThumbnail: thumbResized }}};
 
-🎵 *${title}*
-
-⚡ _Procesando audio..._
-⌛ _Espera un momento..._
-
-*『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』*`, m);
-
-            const dl = await downloadWithFallback(url, 'audio');
-            if (!dl.status) throw dl.error || '❌ Error al descargar';
-
-            const size = await getSize(dl.result.download);
-            console.log(`📦 Tamaño: ${formatSize(size)}`);
-
-            const fkontak = {
-                key: { fromMe: false, participant: "0@s.whatsapp.net" },
-                message: {
-                    documentMessage: {
-                        title: `🎵「 ${title} 」⚡`,
-                        fileName: `Descargas Asta-Bot`,
-                        jpegThumbnail: thumbResized
-                    }
-                }
-            };
-
-            await conn.sendMessage(m.chat, {
-                audio: { url: dl.result.download },
-                mimetype: 'audio/mpeg',
-                fileName: `${title}.mp3`,
-            }, { quoted: fkontak });
-
-            console.log('✅ Audio enviado como mensaje reproducible');
-
-            await m.react('✅');
-            return;
-        }
-
-        // ========== YTMP4 - Video ==========
-        if (command === 'ytmp4') {
-            await conn.reply(m.chat, `╭━━━━━━━━━━━━━╮
-│ ⏳ *DESCARGANDO...*
-╰━━━━━━━━━━━━━╯
-
-📹 *${title}*
-
-⚡ _Procesando video..._
-🎬 _Puede tardar unos minutos..._
-
-*『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』*`, m);
-
-            const dl = await downloadWithFallback(url, 'video');
-            if (!dl.status) throw dl.error || '❌ Error al descargar';
-
-            const size = await getSize(dl.result.download);
-            console.log(`📦 Tamaño: ${formatSize(size)}`);
-
-            const fkontak = {
-                key: { fromMe: false, participant: "0@s.whatsapp.net" },
-                message: {
-                    documentMessage: {
-                        title: `🎬「 ${title} 」⚡`,
-                        fileName: `Descargas Asta-Bot`,
-                        jpegThumbnail: thumbResized
-                    }
-                }
-            };
-
-            if (size > 200 * 1024 * 1024) {
-                throw `📦 Video muy grande (${formatSize(size)}).\n\n💡 Usa: *${usedPrefix}ytmp4doc ${url}*`;
-            }
-
-            await conn.sendMessage(m.chat, {
-                video: { url: dl.result.download },
-                mimetype: 'video/mp4',
-                caption: `🎬 *${title}*`,
-                jpegThumbnail: thumbResized
-            }, { quoted: fkontak });
-
-            await m.react('✅');
-            return;
-        }
-
-        // ========== YTMP3DOC - Audio como documento ==========
-        if (command === 'ytmp3doc') {
-            await conn.reply(m.chat, `╭━━━━━━━━━━━━━╮
-│ 💿 *DESCARGANDO...*
-╰━━━━━━━━━━━━━╯
-
-🎵 *${title}*
-
-📄 _Formato: Documento MP3_
-⚡ _Procesando audio..._
-⏳ _Aguarda un momento..._
-
-*『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』*`, m);
-
-            const dl = await downloadWithFallback(url, 'audio');
-            if (!dl.status) throw dl.error || '❌ Error al descargar';
-
-            const fkontak = {
-                key: { fromMe: false, participant: "0@s.whatsapp.net" },
-                message: {
-                    documentMessage: {
-                        title: `👑「 ${title} 」📿`,
-                        fileName: `Descargas Asta-Bot`,
-                        jpegThumbnail: thumbResized
-                    }
-                }
-            };
-
-            await conn.sendMessage(m.chat, {
-                document: { url: dl.result.download },
-                mimetype: 'audio/mpeg',
-                fileName: `${title}.mp3`,
-                caption: `${title}`,
-                jpegThumbnail: thumbResized
-            }, { quoted: fkontak });
-
-            await m.react('✅');
-            return;
-        }
-
-        // ========== YTMP4DOC - Video como documento ==========
         if (command === 'ytmp4doc') {
-            await conn.reply(m.chat, `╭━━━━━━━━━━━━━╮
-│ 🎥 *DESCARGANDO...*
-╰━━━━━━━━━━━━━╯
-
-📹 *${title}*
-
-📄 _Formato: Documento MP4_
-⚡ _Procesando video..._
-⏳ _Archivos grandes pueden tardar..._
-
-*『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』*`, m);
-
-            const dl = await downloadWithFallback(url, 'video');
-            if (!dl.status) throw dl.error || '❌ Error al descargar';
-
-            const size = await getSize(dl.result.download);
-
-            if (size > 900 * 1024 * 1024) { // Subí el límite a 900 MB por si la película es pesada
-                throw `📦 Video muy grande (${formatSize(size)}).\n\n⚠️ El archivo supera los 900 MB, no puedo enviarlo por WhatsApp.`;
-            }
-
-            const fkontak = {
-                key: { fromMe: false, participant: "0@s.whatsapp.net" },
-                message: {
-                    documentMessage: {
-                        title: `🎬「 ${title} 」⚡`,
-                        fileName: `Descargas Asta-Bot`,
-                        jpegThumbnail: thumbResized
-                    }
-                }
-            };
-
             await conn.sendMessage(m.chat, {
                 document: { url: dl.result.download },
                 mimetype: 'video/mp4',
                 fileName: `${title}.mp4`,
-                jpegThumbnail: thumbResized,
-                caption: `🎬 *${title}*`
+                caption: `🎬 *${rawTitle}*`,
+                jpegThumbnail: thumbResized
             }, { quoted: fkontak });
-
-            await m.react('✅');
-            return;
+        } else if (command === 'ytmp3doc') {
+            await conn.sendMessage(m.chat, {
+                document: { url: dl.result.download },
+                mimetype: 'audio/mpeg',
+                fileName: `${title}.mp3`,
+                jpegThumbnail: thumbResized
+            }, { quoted: fkontak });
+        } else if (command === 'ytmp3') {
+            await conn.sendMessage(m.chat, { audio: { url: dl.result.download }, mimetype: 'audio/mpeg', fileName: `${title}.mp3` }, { quoted: fkontak });
+        } else {
+            await conn.sendMessage(m.chat, { video: { url: dl.result.download }, mimetype: 'video/mp4', caption: `🎬 *${rawTitle}*` }, { quoted: fkontak });
         }
 
+        await m.react('✅');
     } catch (e) {
         await m.react('❌');
-        console.error('❌ Error:', e);
-        return conn.reply(m.chat, typeof e === 'string' ? e : `❌ Error: ${e.message}`, m);
+        return conn.reply(m.chat, `❌ Error: ${e.message || e}`, m);
     }
 }
 
 handler.help = ['play', 'ytmp3', 'ytmp4', 'ytmp3doc', 'ytmp4doc'];
 handler.tags = ['descargas'];
 handler.command = ['play', 'ytmp3', 'ytmp4', 'ytmp3doc', 'ytmp4doc'];
-handler.register = false;
-handler.group = false;
 
 export default handler;
