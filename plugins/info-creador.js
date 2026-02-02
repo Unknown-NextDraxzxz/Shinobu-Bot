@@ -9,10 +9,10 @@ const handler = async (m, { conn, usedPrefix, command }) => {
     }
 
     // Obtener información adicional de los archivos
-    const botName = global.botname || '『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』';
-    const devName = global.dev || 'Powered By 𝕱𝖊𝖗𝖓𝖆𝖓𝖉𝖔';
-    const githubLink = global.github || 'https://github.com/Fer280809/Asta-bot';
-    const gmail = global.gmail || 'fer2809fl@gmail.com';
+    const botName = global.botname || '𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍';
+    const devName = global.dev || 'Powered By ᴍᴀʏᴇʀs';
+    const githubLink = global.github || 'https://github.com/';
+    const gmail = global.gmail || 'support@gmail.com';
 
     // Función para normalizar la entrada de dueños
     const normalizeOwner = (ownerEntry, index) => {
