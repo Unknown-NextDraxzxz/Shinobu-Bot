@@ -83,15 +83,15 @@ END:VCARD`.trim();
       const mensaje = `╭━─━─━─≪°◆°≫─━─━─━╮
 ┃     *${botName}*
 ├─━─━─≪°◇°≫─━─━─━┤
-┃ *👑 ${contact.role}:* ${contact.name}
-┃ *📞 NÚMERO:* +${contact.number}
-┃ *📍 REGIÓN:* ${contact.region}
-┃ *📧 EMAIL:* ${contact.email}
-┃ *🌐 GITHUB:* ${contact.website}
-┃ *📝 NOTA:* ${contact.note}
+┃ *◍ ${contact.role}:* ${contact.name}
+┃ *◍ 𝖭𝖴́𝖬𝖤𝖱𝖮:* +${contact.number}
+┃ *◍ 𝖱𝖤𝖦𝖨𝖮́𝖭:* ${contact.region}
+┃ *◍ 𝖤𝖬𝖠𝖨𝖫:* ${contact.email}
+┃ *◍ 𝖦𝖨𝖳𝖧𝖴𝖡:* ${contact.website}
+┃ *◍ 𝖭𝖮𝖳𝖠:* ${contact.note}
 ╰━─━─━─≪°◆°≫─━─━─━╯
 
-*👉 Contacto enviado como tarjeta digital.*`;
+*➣ 𝖢𝗈𝗇𝗍𝖺𝖼𝗍𝗈 𝖾𝗇𝗏𝗂𝖺𝖽𝗈 𝖼𝗈𝗆𝗈 𝗍𝖺𝗋𝗃𝖾𝗍𝖺 𝖽𝗂𝗀𝗂𝗍𝖺𝗅.*`;
       
       await conn.reply(m.chat, mensaje, m);
       await conn.sendMessage(m.chat, {
