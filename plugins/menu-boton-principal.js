@@ -36,7 +36,7 @@ Selecciona una opción:`;
   ];
   
   // URL de la imagen o video (cambia por tu propia URL)
-  let mediaUrl = 'https://github.com/Fer280809/Asta_bot/blob/main/lib/catalogo.jpg'; // Cambia esto por tu imagen
+  let mediaUrl = 'https://cdn.russellxz.click/a1dfd509.jpg'; // Cambia esto por tu imagen
   // let mediaUrl = 'https://example.com/video.mp4'; // O usa un video
   
   try {
