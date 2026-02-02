@@ -34,12 +34,12 @@ Sub-Bot de Shinobu-BotᏪ
 > Ganar coins trabajando  
 ꕤ *#slut / #prostituirse*
 > Ganar coins prostituyéndote  
-╰┈➤ 🎲 *#coinflip / #flip / #cf* + [cantidad] <cara/cruz>
-        ╰┈➤ Apostar coins en cara o cruz  
-╰┈➤ 🚨 *#crime / #crimen*
-        ╰┈➤ Ganar coins rápido  
-╰┈➤ 🎯 *#roulette / #rt* + [red/black] [cantidad]
-        ╰┈➤ Apostar coins en la ruleta  
+ꕤ *#coinflip / #flip / #cf* + [cantidad] <cara/cruz>
+> Apostar coins en cara o cruz  
+ꕤ *#crime / #crimen*
+> Ganar coins rápido  
+ꕤ *#roulette / #rt* + [red/black] [cantidad]
+> Apostar coins en la ruleta  
 ╰┈➤ 🎰 *#casino / #apostar / #slot* + [cantidad]
         ╰┈➤ Apostar coins en el casino  
 ╰┈➤ 🏦 *#balance / #bal / #bank* + <usuario>
