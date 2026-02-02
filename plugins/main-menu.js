@@ -30,8 +30,8 @@ Sub-Bot de Shinobu-BotᏪ
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos de *Economía* para ganar dinero.  
 
-╰┈➤ 💼 *#w / #work / #trabajar*
-        ╰┈➤ Ganar coins trabajando  
+ꕤ 💼 *#w / #work / #trabajar*
+> Ganar coins trabajando  
 ╰┈➤ 💃 *#slut / #prostituirse*
         ╰┈➤ Ganar coins prostituyéndote  
 ╰┈➤ 🎲 *#coinflip / #flip / #cf* + [cantidad] <cara/cruz>
