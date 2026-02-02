@@ -11,7 +11,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 │ 🎭 ¡Hola @${userId.split('@')[0]}! 💖
 ╰─━━━━━━━━━━━━━━━─╯
 
-Me llamo『 𝕬𝖘𝖙𝖆-𝕭𝖔𝖙 』⚡
+Me llamo ${botname}
 
 ╭─═⊰ 📡 𝐄𝐒𝐓𝐀𝐃𝐎 𝐀𝐂𝐓𝐈𝐕𝐎
 │ 🤖 Estado: ${(conn.user.jid == global.conn.user.jid ? '🟢 PREMIUM' : '🔗 prem-ʙᴏᴛ')}
