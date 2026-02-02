@@ -118,8 +118,8 @@ END:VCARD`.trim();
       
       listaOwners += `╰━─━─━─≪°◆°≫─━─━─━╯
 
-*🔹 Usa ${usedPrefix}${command} [número]* para obtener el contacto de un desarrollador específico.
-*🔸 Ejemplo:* ${usedPrefix}${command} 1`;
+*◎ 𝖴𝗌𝖺 ${usedPrefix}${command} [número]* 𝗉𝖺𝗋𝖺 𝗈𝖻𝗍𝖾𝗇𝖾𝗋 𝖾𝗅 𝖼𝗈𝗇𝗍𝖺𝖼𝗍𝗈 𝖽𝖾 𝗎𝗇 𝖽𝖾𝗌𝖺𝗋𝗋𝗈𝗅𝗅𝖺𝖽𝗈𝗋 𝖾𝗌𝗉𝖾𝖼𝗂́𝖿𝗂𝖼𝗈.
+*◎ 𝖤𝗃𝖾𝗆𝗉𝗅𝗈:* ${usedPrefix}${command} 1`;
       
       await conn.reply(m.chat, listaOwners, m);
     }
