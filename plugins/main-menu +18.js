@@ -74,7 +74,7 @@ Me llamo『 𝕬𝖘𝖙𝖆-𝕭𝖔𝖙 』⚡
 > ✦ 𝐻𝑎𝑐𝑒𝑟 𝑡𝑖𝑗𝑒𝑟𝑎𝑠. `;
 
   let buttons = [
-      { buttonId: usedPrefix + 'menu', buttonText: { displayText: '📜 Menu' }, type: 1 },
+      { buttonId: usedPrefix + 'menu', buttonText: { displayText: '𝗆𝖾𝗇𝗎' }, type: 1 },
   ];
   
   // URL de la imagen o video (cambia por tu propia URL)
@@ -86,7 +86,7 @@ Me llamo『 𝕬𝖘𝖙𝖆-𝕭𝖔𝖙 』⚡
     await conn.sendMessage(m.chat, {
       image: { url: mediaUrl },
       caption: infoText,
-      footer: "『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』⚡",
+      footer: "𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍",
       buttons: buttons,
       headerType: 4,
       mentions: [userId]
@@ -95,7 +95,7 @@ Me llamo『 𝕬𝖘𝖙𝖆-𝕭𝖔𝖙 』⚡
     // Si falla, envía sin imagen (método alternativo)
     let buttonMessage = {
       text: infoText,
-      footer: "『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』⚡",
+      footer: "𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍",
       buttons: buttons,
       headerType: 1,
       mentions: [userId]
