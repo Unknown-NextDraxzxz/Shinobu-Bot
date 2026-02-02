@@ -49,13 +49,13 @@ global.catalogo = fs.readFileSync('./lib/catalogo.jpg')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.group = "https://chat.whatsapp.com/BfCKeP10yZZ9ancsGy1Eh9"
-global.community = "https://chat.whatsapp.com/KKwDZn5vDAE6MhZFAcVQeO"
-global.channel = "https://whatsapp.com/channel/0029Vb64nWqLo4hb8cuxe23n"
-global.github = "https://github.com/Fer280809/Asta-bot"
-global.gmail = "fer2809fl@gmail.com"
+global.group = "https://chat.whatsapp.com/DI8aRRIXmmRKC3cUn9R0Hv?mode=gi_t"
+global.community = "https://chat.whatsapp.com/DI8aRRIXmmRKC3cUn9R0Hv?mode=gi_t"
+global.channel = "https://whatsapp.com/channel/0029Vb5l5w1CHDyjovjN8s2V"
+global.github = "https://github.com/"
+global.gmail = "support@gmail.com"
 global.ch = {
-ch1: "120363399175402285@newsletter"
+ch1: "120363401983007420@newsletter"
 }
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
