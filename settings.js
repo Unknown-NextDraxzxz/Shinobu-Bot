@@ -37,7 +37,7 @@ global.sinprefix = false
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.prefix = new RegExp('^[#!./-]?')
-global.botname = "𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍"
+global.botname = "𝖲𝗁𝗂𝗇𝗈𝖻𝗎"
 global.textbot = "sʜɪɴᴏʙᴜ - ʙᴏᴛ • Powered By ᴍᴀʏᴇʀs"
 global.dev = "Powered By ᴍᴀʏᴇʀs"
 global.author = "sʜɪɴᴏʙᴜ - ʙᴏᴛ • Powered By ᴍᴀʏᴇʀs"
