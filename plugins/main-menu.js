@@ -16,10 +16,10 @@ let handler = async (m, { conn, usedPrefix }) => {
 │ ➢ Users: ${totalreg.toLocaleString()}
 │ ➣ Comandos: ${totalCommands}
 │ ➢ Librería » ${libreria}
-│ ➣ Servidor: México 🇲🇽
-│ ➢ Ping: Online ✅
+│ ➣ Servidor: Oculto
+│ ➢ Ping: Online
 │ ➣ Version: ${vs}
-│ ➢ Modo: ${(conn.user.jid == global.conn.user.jid ? '🔐 PRIVADO' : '🔓 PUBLICO')}
+│ ➢ Modo: ${(conn.user.jid == global.conn.user.jid ? 'Privado' : 'Público')}
 ╰───────────────╯
 
  ✎ Usa #code o #qr para ser
