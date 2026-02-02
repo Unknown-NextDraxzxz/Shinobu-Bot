@@ -1,5 +1,5 @@
 const handler = async (m, { conn, usedPrefix }) => {
-  const logo = 'https://files.catbox.moe/j7gfwf.jpg'
+  const logo = 'https://cdn.russellxz.click/a1dfd509.jpg'
   const body = `╭─◉ 🎉 *BIENVENIDOS A LA ACTUALIZACIÓN 1.3* ◉
 │
 │ ✨ *¡Aquí encontrarás todas las novedades!*
