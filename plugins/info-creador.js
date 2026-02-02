@@ -36,7 +36,7 @@ const handler = async (m, { conn, usedPrefix, command }) => {
         role: index === 0 ? 'Creador Principal' : 'Desarrollador',
         region: 'México',
         email: gmail,
-        note: index === 0 ? '💎 Desarrollador principal de Asta Bot' : '🌟 Soporte y desarrollo'
+        note: index === 0 ? '𝖣𝖾𝗌𝖺𝗋𝗋𝗈𝗅𝗅𝖺𝖽𝗈𝗋 𝗉𝗋𝗂𝗇𝖼𝗂𝗉𝖺𝗅 𝖽𝖾 𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍' : '𝖲𝗈𝗉𝗈𝗋𝗍𝖾 𝗒 𝖽𝖾𝗌𝖺𝗋𝗋𝗈𝗅𝗅𝗈'
       };
     };
 
