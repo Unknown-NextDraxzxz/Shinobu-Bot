@@ -19,7 +19,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 │ ➣ Servidor: Oculto
 │ ➢ Ping: Online
 │ ➣ Version: ${vs}
-│ ➢ Modo: ${(conn.user.jid == global.conn.user.jid ? 'Privado : 'Publica')}
+│ ➢ Modo: ${(conn.user.jid == global.conn.user.jid ? 'Privado' : 'Publico')}
 ╰───────────────╯
 
 *Creador 𝕱𝖊𝖗𝖓𝖆𝖓𝖉𝖔 👑*
