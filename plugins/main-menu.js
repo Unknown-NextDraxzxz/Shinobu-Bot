@@ -22,8 +22,8 @@ let handler = async (m, { conn, usedPrefix }) => {
 │ ➢ Modo: ${(conn.user.jid == global.conn.user.jid ? '🔐 PRIVADO' : '🔓 PUBLICO')}
 ╰───────────────╯
 
-> *✎ Usa #code o #qr para ser
-Sub-Bot de Shinobu-BotᏪ*
+ ✎ Usa #code o #qr para ser
+Sub-Bot de Shinobu-BotᏪ
 
 ┏━━━━━━━━━━━━━━┓
 *💰 ECONOMY*  
