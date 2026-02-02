@@ -8,7 +8,7 @@ let handler = async (m, { conn, usedPrefix }) => {
   let userId = m.sender;
   
   let infoText = `╭─━━━━━━━━━━━━━━━─╮
-│ 🎭 ¡Hola @${userId.split('@')[0]}! 💖
+│ 🎭 ¡Hola @${userId.split('@')[0]} 𝖬𝗂 𝗇𝗈𝗆𝖻𝗋𝖾 𝖾𝗌 ${botname}
 ╰─━━━━━━━━━━━━━━━─╯
 
 Me llamo ${botname}
