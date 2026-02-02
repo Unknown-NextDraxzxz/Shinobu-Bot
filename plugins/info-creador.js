@@ -23,9 +23,9 @@ const handler = async (m, { conn, usedPrefix, command }) => {
           number: number || '',
           name: name || `Colaborador ${index + 1}`,
           role: role || (index === 0 ? 'Creador Principal' : 'Desarrollador'),
-          region: region || 'México',
+          region: region || '𝖮𝖼𝗎𝗅𝗍𝗈',
           email: email || gmail,
-          note: note || (index === 0 ? '💎 Desarrollador principal de Asta Bot' : '🌟 Soporte y desarrollo')
+          note: note || (index === 0 ? '𝖣𝖾𝗌𝖺𝗋𝗋𝗈𝗅𝗅𝖺𝖽𝗈𝗋 𝗉𝗋𝗂𝗇𝖼𝗂𝗉𝖺𝗅 𝖽𝖾 𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍' : '𝖲𝗈𝗉𝗈𝗋𝗍𝖾 𝗒 𝖽𝖾𝗌𝖺𝗋𝗋𝗈𝗅𝗅𝗈')
         };
       }
       
@@ -34,7 +34,7 @@ const handler = async (m, { conn, usedPrefix, command }) => {
         number: ownerEntry,
         name: index === 0 ? (global.etiqueta || 'Fernando') + ' ☣︎' : `Colaborador ${index + 1}`,
         role: index === 0 ? 'Creador Principal' : 'Desarrollador',
-        region: 'México',
+        region: '𝖮𝖼𝗎𝗅𝗍𝗈',
         email: gmail,
         note: index === 0 ? '𝖣𝖾𝗌𝖺𝗋𝗋𝗈𝗅𝗅𝖺𝖽𝗈𝗋 𝗉𝗋𝗂𝗇𝖼𝗂𝗉𝖺𝗅 𝖽𝖾 𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍' : '𝖲𝗈𝗉𝗈𝗋𝗍𝖾 𝗒 𝖽𝖾𝗌𝖺𝗋𝗋𝗈𝗅𝗅𝗈'
       };
