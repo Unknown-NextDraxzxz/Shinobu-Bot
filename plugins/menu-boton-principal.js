@@ -11,7 +11,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 │ ꕤ ¡Hola @${userId.split('@')[0]} 𝖬𝗂 𝗇𝗈𝗆𝖻𝗋𝖾 𝖾𝗌 ${botname}
 ╰─━━━━━━━━━━━━━━━─╯
 
-╭─═⊰ 📡 𝐄𝐒𝐓𝐀𝐃𝐎 𝐀𝐂𝐓𝐈𝐕𝐎
+╭─═⊰ ❀ 𝐄𝐒𝐓𝐀𝐃𝐎 𝐀𝐂𝐓𝐈𝐕𝐎
 │ ➣ Estado: ${(conn.user.jid == global.conn.user.jid ? '❍ Premium' : '❒ Prem-Bot')}
 │ ➢ Users: ${totalreg.toLocaleString()}
 │ ➣ Comandos: ${totalCommands}
