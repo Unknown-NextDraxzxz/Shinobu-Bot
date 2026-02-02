@@ -32,7 +32,7 @@ const handler = async (m, { conn, usedPrefix, command }) => {
       // Si es solo un string (número)
       return {
         number: ownerEntry,
-        name: index === 0 ? (global.etiqueta || 'Fernando') + ' 🐺' : `Colaborador ${index + 1}`,
+        name: index === 0 ? (global.etiqueta || 'Fernando') + ' ☣︎' : `Colaborador ${index + 1}`,
         role: index === 0 ? 'Creador Principal' : 'Desarrollador',
         region: 'México',
         email: gmail,
