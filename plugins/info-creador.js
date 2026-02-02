@@ -107,7 +107,7 @@ END:VCARD`.trim();
     } else {
       // Mostrar lista de todos los dueños
       let listaOwners = `╭━─━─━─≪°◆°≫─━─━─━╮
-┃   *DESARROLLADORES*   
+┃   *𝖣𝖤𝖲𝖠𝖱𝖱𝖮𝖫𝖫𝖠𝖣𝖮𝖱𝖤𝖲*   
 ├─━─━─≪°◇°≫─━─━─━┤\n`;
       
       owners.forEach((owner, index) => {
