@@ -171,25 +171,25 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos para registrar tu propio Bot  
 
-╰┈➤ 🔗 #qr / #code
+╰┈➤ ꕤ #qr / #code
         ╰┈➤ Crear un Sub-Bot con un código QR/Code  
-╰┈➤ 🤖 #bots / #botlist
+╰┈➤ ꕤ #bots / #botlist
         ╰┈➤ Ver el número de bots activos  
-╰┈➤ 📈 #status / #estado
+╰┈➤ ꕤ #status / #estado
         ╰┈➤ Ver el estado del bot  
-╰┈➤ 🏓 #p / #ping
+╰┈➤ ꕤ #p / #ping
         ╰┈➤ Medir tiempo de respuesta  
-╰┈➤ ➕ #join + [Invitación]
+╰┈➤ ꕤ #join + [Invitación]
         ╰┈➤ Unir al bot a un grupo  
-╰┈➤ ❌ #leave / #salir
+╰┈➤ ꕤ #leave / #salir
         ╰┈➤ Salir de un grupo  
-╰┈➤ 🔒 #logout
+╰┈➤ ꕤ #logout
         ╰┈➤ Cerrar sesión del bot  
-╰┈➤ 🖼️ #setpfp / #setimage
+╰┈➤ ꕤ #setpfp / #setimage
         ╰┈➤ Cambiar la imagen de perfil  
-╰┈➤ 📝 #setstatus + [estado]
+╰┈➤ ꕤ #setstatus + [estado]
         ╰┈➤ Cambiar el estado del bot  
-╰┈➤ 🆔 #setusername + [nombre]
+╰┈➤ ꕤ #setusername + [nombre]
         ╰┈➤ Cambiar el nombre de usuario  
 
 ┏━━━━━━━━━━━━━━┓
@@ -197,53 +197,53 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos de Utilidades  
 
-╰┈➤ 📋 #help / #menu
+╰┈➤ ꕤ #help / #menu
         ╰┈➤ Ver el menú de comandos  
-╰┈➤ 📄 #sc / #script
+╰┈➤ ꕤ #sc / #script
         ╰┈➤ Link del repositorio oficial del Bot  
-╰┈➤ 💡 #sug / #suggest
+╰┈➤ ꕤ #sug / #suggest
         ╰┈➤ Sugerir nuevas funciones al desarrollador  
-╰┈➤ 🛠️ #reporte / #reportar
+╰┈➤ ꕤ #reporte / #reportar
         ╰┈➤ Reportar fallas o problemas del bot  
-╰┈➤ 🔢 #calcular / #cal
+╰┈➤ ꕤ #calcular / #cal
         ╰┈➤ Calcular tipos de ecuaciones  
-╰┈➤ 📝 #delmeta
+╰┈➤ ꕤ #delmeta
         ╰┈➤ Restablecer el pack y autor por defecto para tus stickers  
-╰┈➤ 🖼️ #getpic / #pfp + [@usuario]
+╰┈➤ ꕤ #getpic / #pfp + [@usuario]
         ╰┈➤ Ver la foto de perfil de un usuario  
-╰┈➤ 🗣️ #say + [texto]
+╰┈➤ ꕤ #say + [texto]
         ╰┈➤ Repetir un mensaje  
-╰┈➤ ✏️ #setmeta + [autor] | [pack]
+╰┈➤ ꕤ #setmeta + [autor] | [pack]
         ╰┈➤ Establecer el pack y autor por defecto para tus stickers  
-╰┈➤ 🎨 #sticker / #s / #wm + {citar una imagen/video}
+╰┈➤ ꕤ #sticker / #s / #wm + {citar una imagen/video}
         ╰┈➤ Convertir una imagen/video a sticker  
-╰┈➤ 🖼️ #toimg / #img + {citar sticker}
+╰┈➤ ꕤ #toimg / #img + {citar sticker}
         ╰┈➤ Convertir un sticker/imagen a imagen  
-╰┈➤ 🖌️ #brat / #bratv / #qc / #emojimix
+╰┈➤ ꕤ #brat / #bratv / #qc / #emojimix
         ╰┈➤ Crear stickers con texto  
-╰┈➤ 💻 #gitclone + [Link]
+╰┈➤ ꕤ #gitclone + [Link]
         ╰┈➤ Descargar un repositorio de Github  
-╰┈➤ 🔧 #enhance / #remini / #hd
+╰┈➤ ꕤ #enhance / #remini / #hd
         ╰┈➤ Mejorar calidad de una imagen  
-╰┈➤ 🔤 #letra / #style
+╰┈➤ ꕤ #letra / #style
         ╰┈➤ Cambiar la fuente de las letras  
-╰┈➤ 👁️ #read / #readviewonce
+╰┈➤ ꕤ #read / #readviewonce
         ╰┈➤ Ver imágenes viewonce  
-╰┈➤ 🌐 #ss / #ssweb
+╰┈➤ ꕤ #ss / #ssweb
         ╰┈➤ Ver el estado de una página web  
-╰┈➤ 🌍 #translate / #traducir / #trad
+╰┈➤ ꕤ #translate / #traducir / #trad
         ╰┈➤ Traducir palabras a otros idiomas  
-╰┈➤ 🤖 #ia / #gemini
+╰┈➤ ꕤ #ia / #gemini
         ╰┈➤ Preguntar a ChatGPT  
-╰┈➤ 🔗 #tourl / #catbox
+╰┈➤ ꕤ #tourl / #catbox
         ╰┈➤ Convertir imagen/video a URL  
-╰┈➤ 📚 #wiki / #wikipedia
+╰┈➤ ꕤ #wiki / #wikipedia
         ╰┈➤ Investigar temas a través de Wikipedia  
-╰┈➤ 🎨 #dalle / #flux
+╰┈➤ ꕤ #dalle / #flux
         ╰┈➤ Crear imágenes con texto mediante IA  
-╰┈➤ 📦 #npmdl / #nmpjs
+╰┈➤ ꕤ #npmdl / #nmpjs
         ╰┈➤ Descargar paquetes de NPMJS  
-╰┈➤ 🔎 #google
+╰┈➤ ꕤ #google
         ╰┈➤ Realizar búsquedas por Google  
 
 
