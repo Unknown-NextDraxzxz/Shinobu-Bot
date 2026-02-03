@@ -6,44 +6,49 @@ let handler = async (m, { conn, usedPrefix }) => {
   let libreria = 'Baileys';
   let vs = '1.3';
   let userId = m.sender;
-  
-  let infoText = `╭─━━━━━━━━━━━━━━━─╮
-│ ꕤ ¡Hola @${userId.split('@')[0]} 𝖬𝗂 𝗇𝗈𝗆𝖻𝗋𝖾 𝖾𝗌 ${botname}
-╰─━━━━━━━━━━━━━━━─
 
-╭─═⊰ ❀ 𝐄𝐒𝐓𝐀𝐃𝐎 𝐀𝐂𝐓𝐈𝐕𝐎
-│ ➣ Estado: ${(conn.user.jid == global.conn.user.jid ? '❍ Premium' : '❒ Prem-Bot')}
-│ ➢ Users: ${totalreg.toLocaleString()}
-│ ➣ Comandos: ${totalCommands}
-│ ➢ Librería » ${libreria}
-│ ➣ Servidor: Oculto
-│ ➢ Ping: Online
-│ ➣ Version: ${vs}
-│ ➢ Modo: ${(conn.user.jid == global.conn.user.jid ? 'Privado' : 'Público')}
+  let infoText = `╭─━━━━━━━━━━━━━━━─╮
+│ 🎭 ¡Hola @${userId.split('@')[0]}! 💖
+╰─━━━━━━━━━━━━━━━─╯
+
+Me llamo『 𝕬𝖘𝖙𝖆-𝕭𝖔𝖙 』⚡
+
+╭─═⊰ 📡 𝐄𝐒𝐓𝐀𝐃𝐎 𝐀𝐂𝐓𝐈𝐕𝐎
+│ 🤖 Estado: ${(conn.user.jid == global.conn.user.jid ? '🟢 PREMIUM' : '🔗 prem-ʙᴏᴛ')}
+│ 👥 Users: 『${totalreg.toLocaleString()}』🔥
+│ 🛠️ Comandos: 『${totalCommands}』⚙️
+│ 📅 Librería » ${libreria}
+│ 🌍 Servidor: México 🇲🇽
+│ 📡 Ping: Online ✅
+│ 💾 Version: ${vs}
+│ 🔒 Modo: ${(conn.user.jid == global.conn.user.jid ? '🔐 PRIVADO' : '🔓 PUBLICO')}
 ╰───────────────╯
 
- ✎ Usa #code o #qr para ser
-Sub-Bot de Shinobu-BotᏪ
+
+
+*🤖 PON #code O #qr PARA HACERTE SUBBOT DEL ASTA-BOT-MD 📡*
+
+
 
 ┏━━━━━━━━━━━━━━┓
 *💰 ECONOMY*  
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos de *Economía* para ganar dinero.  
 
-ꕤ *#w / #work / #trabajar*
-> Ganar coins trabajando  
-ꕤ *#slut / #prostituirse*
-> Ganar coins prostituyéndote  
-ꕤ *#coinflip / #flip / #cf* + [cantidad] <cara/cruz>
-> Apostar coins en cara o cruz  
-ꕤ *#crime / #crimen*
-> Ganar coins rápido  
-ꕤ *#roulette / #rt* + [red/black] [cantidad]
-> Apostar coins en la ruleta  
-ꕤ *#casino / #apostar / #slot* + [cantidad]
-> apostar coins en el casino  
-ꕤ *#balance / #bal / #bank* + <usuario>
-> ver cuantos coins tienes en el banco  
+╰┈➤ 💼 *#w / #work / #trabajar*
+        ╰┈➤ Ganar coins trabajando  
+╰┈➤ 💃 *#slut / #prostituirse*
+        ╰┈➤ Ganar coins prostituyéndote  
+╰┈➤ 🎲 *#coinflip / #flip / #cf* + [cantidad] <cara/cruz>
+        ╰┈➤ Apostar coins en cara o cruz  
+╰┈➤ 🚨 *#crime / #crimen*
+        ╰┈➤ Ganar coins rápido  
+╰┈➤ 🎯 *#roulette / #rt* + [red/black] [cantidad]
+        ╰┈➤ Apostar coins en la ruleta  
+╰┈➤ 🎰 *#casino / #apostar / #slot* + [cantidad]
+        ╰┈➤ Apostar coins en el casino  
+╰┈➤ 🏦 *#balance / #bal / #bank* + <usuario>
+        ╰┈➤ Ver cuantos coins tienes en el banco  
 ╰┈➤ 💳 *#deposit / #dep / #depositar / #d* + [cantidad] | all
         ╰┈➤ Depositar tus coins en el banco  
 ╰┈➤ 💸 *#withdraw / #with / #retirar* + [cantidad] | all
@@ -480,17 +485,17 @@ Sub-Bot de Shinobu-BotᏪ
   let buttons = [
       { buttonId: usedPrefix + 'code', buttonText: { displayText: '🤖 Sup-Bot' }, type: 1 }
   ];
-  
+
   // URL de la imagen o video (cambia por tu propia URL)
-  let mediaUrl = 'https://cdn.russellxz.click/a1dfd509.jpg'; // Cambia esto por tu imagen
+  let mediaUrl = 'https://github.com/Fer280809/Asta_bot/blob/main/lib/catalogo.jpg'; // Cambia esto por tu imagen
   // let mediaUrl = 'https://example.com/video.mp4'; // O usa un video
-  
+
   try {
     // Intenta enviar con imagen
     await conn.sendMessage(m.chat, {
       image: { url: mediaUrl },
       caption: infoText,
-      footer: "『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』⚡",
+      footer: "𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍",
       buttons: buttons,
       headerType: 4,
       mentions: [userId]
@@ -499,7 +504,7 @@ Sub-Bot de Shinobu-BotᏪ
     // Si falla, envía sin imagen (método alternativo)
     let buttonMessage = {
       text: infoText,
-      footer: "『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』⚡",
+      footer: "𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍",
       buttons: buttons,
       headerType: 1,
       mentions: [userId]
