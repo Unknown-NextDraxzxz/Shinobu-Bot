@@ -22,11 +22,8 @@ let handler = async (m, { conn, usedPrefix }) => {
 │ ➢ Modo: ${(conn.user.jid == global.conn.user.jid ? 'Privado' : 'Publico')}
 ╰───────────────╯
 
-
-
-*🤖 PON #code O #qr PARA HACERTE SUBBOT DEL ASTA-BOT-MD 📡*
-
-
+𝗎𝗌𝖺 #code 𝗈 #qr 𝗉𝖺𝗋𝖺 𝗏𝗈𝗅𝗏𝖾𝗋𝗍𝖾 
+𝖲𝗎𝖻-𝖡𝗈𝗍 𝖽𝖾 𝖲𝗁𝗂𝗇o𝖻𝗎
 
 ᰔᩚ *#𝑎𝑛𝑎𝑙* + <𝑚𝑒𝑛𝑐𝑖𝑜𝑛>
 > ✦ 𝐻𝑎𝑐𝑒𝑟 𝑢𝑛 𝑎𝑛𝑎𝑙
