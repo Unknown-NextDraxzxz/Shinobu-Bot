@@ -21,29 +21,29 @@ let drm2 = ""
 // Imagen para el QR y CODE
 const imagenSerBot = 'https://files.catbox.moe/gptlxc.jpg'
 
-let rtx = `╭─〔 💻 𝘼𝙎𝙏𝘼 𝘽𝙊𝙏 • 𝙈𝙊𝘿𝙊 𝙌𝙍 〕─╮
+let rtx = `╭─〔 💻 𝗦𝗛𝗜𝗡𝗢𝗕𝗨 𝗕𝗢𝗧 • 𝗠𝗢𝗗𝗢 𝗤𝗥 〕─╮
 │
-│  📲 Escanea este *QR* desde otro celular o PC
-│  para convertirte en un *Sub-Bot Temporal* de Asta.
+│  ◍ Escanea este *QR* desde otro celular o PC
+│  para convertirte en un *Sub-Bot Temporal* de Shinobu.
 │
-│  1️⃣  Pulsa los ⋮ tres puntos arriba a la derecha
-│  2️⃣  Ve a *Dispositivos vinculados*
-│  3️⃣  Escanea el QR y ¡listo! ⚡
+│  ◍  Pulsa los ⋮ tres puntos arriba a la derecha
+│  ◍  Ve a *Dispositivos vinculados*
+│  ◍  Escanea el QR y ¡listo! 
 │
-│  ⏳  *Expira en 45 segundos.*
+│  ◍  *Expira en 45 segundos.*
 ╰───────────────────────`
 
-let rtx2 = `╭─[ 💻 𝘼𝙎𝙏𝘼 𝘽𝙊𝙏 • 𝙈𝙊𝘿𝙊 𝘾𝙊𝘿𝙀 ]─╮
+let rtx2 = `╭─[ 💻 𝗦𝗛𝗜𝗡𝗢𝗕𝗨 𝗕𝗢𝗧 • 𝗠𝗢𝗗𝗢 𝗖𝗢𝗗𝗘 ]─╮
 │
-│  🧠  Este es el *Modo CODE* de Asta Bot.
+│  ◍  Este es el *Modo CODE* de Shinobu Bot.
 │  Escanea el *QR* desde otro celular o PC
 │  para convertirte en un *Sub-Bot Temporal*.
 │
-│  1️⃣  Pulsa los ⋮ tres puntos arriba a la derecha
-│  2️⃣  Entra en *Dispositivos vinculados*
-│  3️⃣  Escanea el QR y ¡listo! ⚡
+│  ◍  Pulsa los ⋮ tres puntos arriba a la derecha
+│  ◍  Entra en *Dispositivos vinculados*
+│  ◍  Escanea el QR y ¡listo! 
 │
-│  ⏳  *Expira en 45 segundos.*
+│  ◍  *Expira en 45 segundos.*
 ╰────────────────────────╯`
 
 const __filename = fileURLToPath(import.meta.url)
