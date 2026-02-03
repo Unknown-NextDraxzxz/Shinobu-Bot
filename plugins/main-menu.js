@@ -252,31 +252,31 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos de Perfil para ver y configurar tu perfil  
 
-╰┈➤ 🏆 #leaderboard / #lboard / #top + <pagina>
+╰┈➤ ꕤ #leaderboard / #lboard / #top + <pagina>
         ╰┈➤ Top de usuarios con más experiencia  
-╰┈➤ 📊 #level / #lvl + <@Mencion>
+╰┈➤ ꕤ #level / #lvl + <@Mencion>
         ╰┈➤ Ver tu nivel y experiencia actual  
-╰┈➤ 💍 #marry / #casarse + <@Mencion>
+╰┈➤ ꕤ #marry / #casarse + <@Mencion>
         ╰┈➤ Casarte con alguien  
-╰┈➤ 📝 #profile + <@Mencion>
+╰┈➤ ꕤ #profile + <@Mencion>
         ╰┈➤ Ver tu perfil  
-╰┈➤ 🎂 #setbirth + [fecha]
+╰┈➤ ꕤ #setbirth + [fecha]
         ╰┈➤ Establecer tu fecha de cumpleaños  
-╰┈➤ ✏️ #setdescription / #setdesc + [Descripcion]
+╰┈➤ ꕤ #setdescription / #setdesc + [Descripcion]
         ╰┈➤ Establecer tu descripción  
-╰┈➤ ⚧ #setgenre + Hombre | Mujer
+╰┈➤ ꕤ #setgenre + Hombre | Mujer
         ╰┈➤ Establecer tu género  
-╰┈➤ ❌ #delgenre / #delgenero
+╰┈➤ ꕤ #delgenre / #delgenero
         ╰┈➤ Eliminar tu género  
-╰┈➤ ❌ #delbirth + [fecha]
+╰┈➤ ꕤ #delbirth + [fecha]
         ╰┈➤ Borrar tu fecha de cumpleaños  
-╰┈➤ 💔 #divorce
+╰┈➤ ꕤ #divorce
         ╰┈➤ Divorciarte de tu pareja  
-╰┈➤ ⭐ #setfavourite / #setfav + [Personaje]
+╰┈➤ ꕤ #setfavourite / #setfav + [Personaje]
         ╰┈➤ Establecer tu claim favorito  
-╰┈➤ ❌ #deldescription / #deldesc
+╰┈➤ ꕤ #deldescription / #deldesc
         ╰┈➤ Eliminar tu descripción  
-╰┈➤ 💎 #prem / #vip
+╰┈➤ ꕤ #prem / #vip
         ╰┈➤ Comprar membresía premium  
 
 
@@ -285,69 +285,69 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos para Administradores de grupos  
 
-╰┈➤ 📢 #tag / #hidetag / #invocar / #tagall + [mensaje]
+╰┈➤ ꕤ #tag / #hidetag / #invocar / #tagall + [mensaje]
         ╰┈➤ Envía un mensaje mencionando a todos los usuarios del grupo  
-╰┈➤ ⚠️ #detect / #alertas + [enable/disable]
+╰┈➤ ꕤ #detect / #alertas + [enable/disable]
         ╰┈➤ Activar/desactivar las alertas de promote/demote  
-╰┈➤ 🔎 #setting / #config 
+╰┈➤ ꕤ #setting / #config 
         ╰┈➤ activa y o desactiva y ve las opciones que estan activas o desactivadas y ve el menu de opciones
-╰┈➤ 🔗 #antilink / #antienlace + [enable/disable]
+╰┈➤ ꕤ #antilink / #antienlace + [enable/disable]
         ╰┈➤ Activar/desactivar el antienlace  
-╰┈➤ 🤖 #bot + [enable/disable]
+╰┈➤ ꕤ #bot + [enable/disable]
         ╰┈➤ Activar/desactivar al bot  
-╰┈➤ 🔒 #close / #cerrar
+╰┈➤ ꕤ #close / #cerrar
         ╰┈➤ Cerrar el grupo para que solo los administradores puedan enviar mensajes  
-╰┈➤ ⬇️ #demote + <@usuario> | {mencion}
+╰┈➤ ꕤ #demote + <@usuario> | {mencion}
         ╰┈➤ Descender a un usuario de administrador  
-╰┈➤ 💰 #economy + [enable/disable]
+╰┈➤ ꕤ #economy + [enable/disable]
         ╰┈➤ Activar/desactivar los comandos de economía  
-╰┈➤ 🎮 #gacha + [enable/disable]
+╰┈➤ ꕤ #gacha + [enable/disable]
         ╰┈➤ Activar/desactivar los comandos de Gacha y Games  
-╰┈➤ 🎉 #welcome / #bienvenida + [enable/disable]
+╰┈➤ ꕤ #welcome / #bienvenida + [enable/disable]
         ╰┈➤ Activar/desactivar la bienvenida y despedida  
-╰┈➤ ✉️ #setbye + [texto]
+╰┈➤ ꕤ #setbye + [texto]
         ╰┈➤ Establecer un mensaje de despedida personalizado  
-╰┈➤ ⭐ #setprimary + [@bot]
+╰┈➤ ꕤ #setprimary + [@bot]
         ╰┈➤ Establece un bot como primario del grupo  
-╰┈➤ ✉️ #setwelcome + [texto]
+╰┈➤ ꕤ #setwelcome + [texto]
         ╰┈➤ Establecer un mensaje de bienvenida personalizado  
-╰┈➤ ❌ #kick + <@usuario> | {mencion}
+╰┈➤ ꕤ #kick + <@usuario> | {mencion}
         ╰┈➤ Expulsar a un usuario del grupo  
-╰┈➤ 🔓 #open / #abrir
+╰┈➤ ꕤ #open / #abrir
         ╰┈➤ Abrir el grupo para que todos los usuarios puedan enviar mensajes  
-╰┈➤ ⬆️ #promote + <@usuario> | {mencion}
+╰┈➤ ꕤ #promote + <@usuario> | {mencion}
         ╰┈➤ Ascender a un usuario a administrador  
-╰┈➤ ➕ #add / #añadir / #agregar + {número}
+╰┈➤ ꕤ #add / #añadir / #agregar + {número}
         ╰┈➤ Invitar a un usuario a tu grupo  
-╰┈➤ 👑 admins / admin + [texto]
+╰┈➤ ꕤ admins / admin + [texto]
         ╰┈➤ Mencionar a los admins para solicitar ayuda  
-╰┈➤ 🔄 #restablecer / #revoke
+╰┈➤ ꕤ #restablecer / #revoke
         ╰┈➤ Restablecer enlace del grupo  
-╰┈➤ ⚠️ #addwarn / #warn + <@usuario> | {mencion}
+╰┈➤ ꕤ #addwarn / #warn + <@usuario> | {mencion}
         ╰┈➤ Advertir a un usuario  
-╰┈➤ ❌ #unwarn / #delwarn + <@usuario> | {mencion}
+╰┈➤ ꕤ #unwarn / #delwarn + <@usuario> | {mencion}
         ╰┈➤ Quitar advertencias de un usuario  
-╰┈➤ 📋 #advlist / #listadv
+╰┈➤ ꕤ #advlist / #listadv
         ╰┈➤ Ver lista de usuarios advertidos  
-╰┈➤ 💤 #inactivos / #kickinactivos
+╰┈➤ ꕤ #inactivos / #kickinactivos
         ╰┈➤ Ver y eliminar a usuarios inactivos  
-╰┈➤ 🚫 #listnum / #kicknum [texto]
+╰┈➤ ꕤ #listnum / #kicknum [texto]
         ╰┈➤ Eliminar usuarios con prefijo de país  
-╰┈➤ 🚫  #stopkicknum
+╰┈➤ ꕤ  #stopkicknum
         ╰┈➤ parar el kicknum cuando nesesites
-╰┈➤ 🖼️ #gpbanner / #groupimg
+╰┈➤ ꕤ #gpbanner / #groupimg
         ╰┈➤ Cambiar la imagen del grupo  
-╰┈➤ ✏️ #gpname / #groupname [texto]
+╰┈➤ ꕤ #gpname / #groupname [texto]
         ╰┈➤ Cambiar el nombre del grupo  
-╰┈➤ 📝 #gpdesc / #groupdesc [texto]
+╰┈➤ ꕤ #gpdesc / #groupdesc [texto]
         ╰┈➤ Cambiar la descripción del grupo  
-╰┈➤ ❌ #del / #delete + {citar un mensaje}
+╰┈➤ ꕤ #del / #delete + {citar un mensaje}
         ╰┈➤ Eliminar un mensaje  
-╰┈➤ 👥 #linea / #listonline
+╰┈➤ ꕤ #linea / #listonline
         ╰┈➤ Ver lista de usuarios en línea  
-╰┈➤ ℹ️ #gp / #infogrupo
+╰┈➤ ꕤ #gp / #infogrupo
         ╰┈➤ Ver la información del grupo  
-╰┈➤ 🔗 #link
+╰┈➤ ꕤ #link
         ╰┈➤ Ver enlace de invitación del grupo  
 
 
