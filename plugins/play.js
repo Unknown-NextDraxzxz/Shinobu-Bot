@@ -550,7 +550,7 @@ async function handleDownload(m, conn, text, command, usedPrefix) {
                 key: { fromMe: false, participant: "0@s.whatsapp.net" },
                 message: {
                     documentMessage: {
-                        title: `🎬「 ${title} 」⚡`,
+                        title: `✎「 ${title} 」Ꮺ`,
                         fileName: `Descargas 𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍`,
                         jpegThumbnail: thumbResized
                     }
