@@ -23,32 +23,32 @@ let handler = async (m, { conn, usedPrefix }) => {
 ╰───────────────╯
 
 𝗎𝗌𝖺 #code 𝗈 #qr 𝗉𝖺𝗋𝖺 𝗏𝗈𝗅𝗏𝖾𝗋𝗍𝖾 
-𝖲𝗎𝖻-𝖡𝗈𝗍 𝖽𝖾 𝖲𝗁𝗂𝗇𝗈𝖻𝗎
+𝖲𝗎𝖻-𝖡𝗈𝗍 𝖽𝖾 𝖲𝗁𝗂𝗇o𝖻𝗎
 
 ┏━━━━━━━━━━━━━━┓
 *ECONOMY*  
 ┗━━━━━━━━━━━━━━┛
-╰┈➤ ✿ Comandos de *Economía* para ganar dinero.  
+╰┈➤ ✿ Comandos de Economía para ganar dinero.  
 
 ╰┈➤ ꕤ #w | #work | #trabajar
         ╰┈➤ Ganar coins trabajando  
-╰┈➤ ꕤ #slut | #prostituirse*
+╰┈➤ ꕤ #slut | #prostituirse
         ╰┈➤ Ganar coins prostituyéndote  
 ╰┈➤ ꕤ #coinflip | #flip | #cf + [cantidad] <cara/cruz>
         ╰┈➤ Apostar coins en cara o cruz  
 ╰┈➤ ꕤ #crime | #crimen
         ╰┈➤ Ganar coins rápido  
-╰┈➤ ꕤ *#roulette | #rt* + [red/black] [cantidad]
+╰┈➤ ꕤ #roulette | #rt + [red/black] [cantidad]
         ╰┈➤ Apostar coins en la ruleta  
-╰┈➤ ꕤ *#casino | #apostar | #slot* + [cantidad]
+╰┈➤ ꕤ #casino | #apostar | #slot + [cantidad]
         ╰┈➤ Apostar coins en el casino  
-╰┈➤ ꕤ *#balance | #bal | #bank* + <usuario>
+╰┈➤ ꕤ *#balance | #bal | #bank + <usuario>
         ╰┈➤ Ver cuantos coins tienes en el banco  
-╰┈➤ ꕤ *#deposit / #dep / #depositar / #d* + [cantidad] | all
+╰┈➤ ꕤ #deposit / #dep / #depositar / #d + [cantidad] | all
         ╰┈➤ Depositar tus coins en el banco  
-╰┈➤ ꕤ *#withdraw / #with / #retirar* + [cantidad] | all
+╰┈➤ ꕤ #withdraw / #with / #retirar + [cantidad] | all
         ╰┈➤ Retirar tus coins del banco  
-╰┈➤ ꕤ *#economyinfo / #einfo*
+╰┈➤ ꕤ #economyinfo / #einfo
         ╰┈➤ Ver tu información de economía  
 ╰┈➤ ꕤ *#givecoins / #pay / #coinsgive* + [usuario] [cantidad]
         ╰┈➤ Dar coins a un usuario  
