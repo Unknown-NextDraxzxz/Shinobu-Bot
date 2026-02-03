@@ -24,7 +24,8 @@ let handler = async (m, { conn, usedPrefix }) => {
 
 
 
-*🤖 PON #code O #qr PARA HACERTE SUBBOT DEL ASTA-BOT-MD 📡*
+*𝗎𝗌𝖺 #code 𝗈 #qr 𝗉𝖺𝗋𝖺 𝗏𝗈𝗅𝗏𝖾𝗋𝗍𝖾 
+𝖲𝗎𝖻-𝖡𝗈𝗍 𝖽𝖾 𝖲𝗁𝗂𝗇𝗈𝖻𝗎*
 
 
 
