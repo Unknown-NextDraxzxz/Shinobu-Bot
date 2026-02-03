@@ -30,47 +30,47 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos de *Economía* para ganar dinero.  
 
-╰┈➤ 💼 *#w / #work / #trabajar*
+╰┈➤ ꕤ *#w / #work / #trabajar*
         ╰┈➤ Ganar coins trabajando  
-╰┈➤ 💃 *#slut / #prostituirse*
+╰┈➤ ꕤ *#slut / #prostituirse*
         ╰┈➤ Ganar coins prostituyéndote  
-╰┈➤ 🎲 *#coinflip / #flip / #cf* + [cantidad] <cara/cruz>
+╰┈➤ ꕤ *#coinflip / #flip / #cf* + [cantidad] <cara/cruz>
         ╰┈➤ Apostar coins en cara o cruz  
-╰┈➤ 🚨 *#crime / #crimen*
+╰┈➤ ꕤ *#crime / #crimen*
         ╰┈➤ Ganar coins rápido  
-╰┈➤ 🎯 *#roulette / #rt* + [red/black] [cantidad]
+╰┈➤ ꕤ *#roulette / #rt* + [red/black] [cantidad]
         ╰┈➤ Apostar coins en la ruleta  
-╰┈➤ 🎰 *#casino / #apostar / #slot* + [cantidad]
+╰┈➤ ꕤ *#casino / #apostar / #slot* + [cantidad]
         ╰┈➤ Apostar coins en el casino  
-╰┈➤ 🏦 *#balance / #bal / #bank* + <usuario>
+╰┈➤ ꕤ *#balance / #bal / #bank* + <usuario>
         ╰┈➤ Ver cuantos coins tienes en el banco  
-╰┈➤ 💳 *#deposit / #dep / #depositar / #d* + [cantidad] | all
+╰┈➤ ꕤ *#deposit / #dep / #depositar / #d* + [cantidad] | all
         ╰┈➤ Depositar tus coins en el banco  
-╰┈➤ 💸 *#withdraw / #with / #retirar* + [cantidad] | all
+╰┈➤ ꕤ *#withdraw / #with / #retirar* + [cantidad] | all
         ╰┈➤ Retirar tus coins del banco  
-╰┈➤ 📊 *#economyinfo / #einfo*
+╰┈➤ ꕤ *#economyinfo / #einfo*
         ╰┈➤ Ver tu información de economía  
-╰┈➤ 🤝 *#givecoins / #pay / #coinsgive* + [usuario] [cantidad]
+╰┈➤ ꕤ *#givecoins / #pay / #coinsgive* + [usuario] [cantidad]
         ╰┈➤ Dar coins a un usuario  
-╰┈➤ ⛏️ *#miming / #minar / #mine*
+╰┈➤ ꕤ *#miming / #minar / #mine*
         ╰┈➤ Realizar trabajos de minería y ganar coins  
-╰┈➤ 🎁 *#daily / #diario*
+╰┈➤ ꕤ *#daily / #diario*
         ╰┈➤ Reclamar tu recompensa diaria  
-╰┈➤ 🧰 *#cofre / #coffer*
+╰┈➤ ꕤ *#cofre / #coffer*
         ╰┈➤ Reclamar tu cofre diario  
-╰┈➤ 📅 *#weekly / #semanal*
+╰┈➤ ꕤ *#weekly / #semanal*
         ╰┈➤ Reclamar tu recompensa semanal  
-╰┈➤ 🗓️ *#monthly / #mensual*
+╰┈➤ ꕤ *#monthly / #mensual*
         ╰┈➤ Reclamar tu recompensa mensual  
-╰┈➤ 🕶️ *#steal / #robar / #rob* + [@mencion]
+╰┈➤ ꕤ *#steal / #robar / #rob* + [@mencion]
         ╰┈➤ Intentar robar coins a un usuario  
-╰┈➤ 🏆 *#economyboard / #eboard / #baltop* + <pagina>
+╰┈➤ ꕤ *#economyboard / #eboard / #baltop* + <pagina>
         ╰┈➤ Ver el ranking económico del grupo  
-╰┈➤ ⚔️ *#aventura / #adventure*
+╰┈➤ ꕤ *#aventura / #adventure*
         ╰┈➤ Aventuras para ganar coins y exp  
-╰┈➤ ❤️ *#curar / #heal*
+╰┈➤ ꕤ *#curar / #heal*
         ╰┈➤ Curar salud para salir de aventuras  
-╰┈➤ 🦌 *#cazar / #hunt*
+╰┈➤ ꕤ *#cazar / #hunt*
         ╰┈➤ Cazar animales para ganar coins y exp  
 ╰┈➤ 🎣 *#fish / #pescar*
         ╰┈➤ Ganar coins y exp pescando  
