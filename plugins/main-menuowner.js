@@ -23,32 +23,32 @@ let handler = async (m, { conn, args }) => {
 │ 🎭 ¡Hola @${userId.split('@')[0]}! 💖
 ╰─━━━━━━━━━━━━━━━─╯
 
-╭─═⊰ 📡 𝐄𝐒𝐓𝐀𝐃𝐎 𝐀𝐂𝐓𝐈𝐕𝐎
-│ 🤖 Estado: ${(conn.user.jid == global.conn.user.jid ? '🟢 PREMIUM ' : '🔗 prem-ʙᴏᴛ')}
-│ ⚡ Activo: 『${uptime}』
-│ 👥 Users: 『${totalreg}』🔥
-│ 🛠️ Comandos: 『${totalCommands}』⚙️
-│ 📅 Fecha: ${moment().tz('America/Mexico_City').format('DD/MM/YYYY')}
-│ 🕐 Hora: ${moment().tz('America/Mexico_City').format('HH:mm:ss')}
-│ 🌍 Servidor: México 🇲🇽
-│ 📡 Ping: Online ✅
-│ 💾 Memoria: Estable 📊
-│ 🔒 Modo: Privado 🔐
+╭─═⊰ ❀ 𝐄𝐒𝐓𝐀𝐃𝐎 𝐀𝐂𝐓𝐈𝐕𝐎
+│ ➢ Estado: ${(conn.user.jid == global.conn.user.jid ? '❍ Premium ' : '❒ prem-Bot')}
+│ ➣ Activo: ${uptime}
+│ ➢ Users: ${totalreg}
+│ ➣ Comandos: ${totalCommands}
+│ ➢ Fecha: ${moment().tz('America/Mexico_City').format('DD/MM/YYYY')}
+│ ➣ Hora: ${moment().tz('America/Mexico_City').format('HH:mm:ss')}
+│ ➢ Servidor: México
+│ ➣ Ping: Online 
+│ ➢ Memoria: Estable
+│ ➣ Modo: Privado 
 ╰───────────────╯                                                                                                                                                                                                                                                                                                                                                                                                                    
 
 ═══ COMANDOS DE OWNER ═══
 
-🔑 *GESTIÓN OWNERS*
+◎ *GESTIÓN OWNERS*
 • #addowner • #delowner
 • #codigo
 
-💾 *ARCHIVOS*
+◎ *ARCHIVOS*
 • #backup • #copia
 • #cleanfiles • #dsowner
 • #cleartmp • #vaciartmp
 • #deletefile
 
-💰 *ECONOMÍA*
+◎ *ECONOMÍA*
 • #addcoins • #añadircoin
 • #userpremium • #addprem
 • #delprem • #remove
@@ -57,17 +57,17 @@ let handler = async (m, { conn, args }) => {
 • #deletedatauser • #resetuser
 • #removexp • #quitarxp
 
-📢 *COMUNICACIÓN*
+◎ *COMUNICACIÓN*
 • #bcgc • #let
 • #reunion • #meeting
 
-🚫 *SISTEMA DE BANEOS*
-┌─ 🔐 Solo Fernando:
+◎ *SISTEMA DE BANEOS*
+┌─ ◍ Solo Fernando:
 │ • #banned [usuario] [tiempo] [razón]
 │ • #unban [usuario]
-├─ 👥 Todos los usuarios:
+├─ ◍ Todos los usuarios:
 │ • #horaban
-└─ 👑 Owners:
+└─ ◍ Owners:
   • #checkban [usuario]
   • #banlist
   • #block [usuario]
@@ -81,20 +81,20 @@ let handler = async (m, { conn, args }) => {
 • #unban @user
 • #horaban (ver tu tiempo de baneo)
 
-🤖 *ADMIN AUTO*
+◎ *ADMIN AUTO*
 • #autoadmin
 
-👥 *GRUPOS*
+◎ *GRUPOS*
 • #newgc • #creargc
 • #grouplist • #listgroup
 • #join • #invite
 • #leave • #salir
 
-🌐 *WEB*
+◎ *WEB*
 • #get • #fetch
 • #plugin • #getplugin
 
-⚙️ *CONFIGURACIÓN*
+◎ *CONFIGURACIÓN*
 • #prefix • #resetprefix
 • #reiniciar • #restart
 • #setbanner • #setavatar
@@ -103,7 +103,7 @@ let handler = async (m, { conn, args }) => {
 • #setbio2 • #setstatus2
 • #update
 
-💾 *COMANDOS CUSTOM*
+◎ *COMANDOS CUSTOM*
 • #addcmd • #setcmd
 • #delcmd • #cmdlist
 • #listcmd • #editarplugin
@@ -112,10 +112,10 @@ let handler = async (m, { conn, args }) => {
 • #descargarplugins • #descargarplugin 
 
 ╭────────────────────
-│ ✨ Usa con responsabilidad
-│ 🔒 Sistema de baneos mejorado
-│ ⏱️ Soporta baneos temporales
-╰────── 👑 OWNER 👑
+│ ◍ Usa con responsabilidad
+│ ◍ Sistema de baneos mejorado
+│ ◍ Soporta baneos temporales
+╰────── ◍ OWNER ◍
 `
 
     try {
