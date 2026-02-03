@@ -29,10 +29,10 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┏━━━━━━━━━━━━━━┓
 *💰 ECONOMY*  
 ┗━━━━━━━━━━━━━━┛
-ꕤ *#w / #work / #trabajar*
+ꕤ #w / #work / #trabajar
 > Ganar coins trabajando  
 
-ꕤ *#slut / #prostituirse*
+ꕤ #slut / #prostituirse
 > Ganar coins prostituyéndote  
 
 ꕤ *#coinflip / #flip / #cf* + [cantidad] [cara/cruz]
