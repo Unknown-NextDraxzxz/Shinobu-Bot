@@ -8,10 +8,8 @@ let handler = async (m, { conn, usedPrefix }) => {
   let userId = m.sender;
   
   let infoText = `╭─━━━━━━━━━━━━━━━─╮
-│ ꕤ ¡Hola @${userId.split('@')[0]}! 💖
+│ ꕤ ¡Hola @${userId.split('@')[0]} 𝖬𝗂 𝗇𝗈𝗆𝖻𝗋𝖾 𝖾𝗌 ${botname}
 ╰─━━━━━━━━━━━━━━━─╯
-
-Me llamo『 𝕬𝖘𝖙𝖆-𝕭𝖔𝖙 』⚡
 
 ╭─═⊰ ❀ 𝐄𝐒𝐓𝐀𝐃𝐎 𝐀𝐂𝐓𝐈𝐕𝐎
 │ ➣ Estado: ${(conn.user.jid == global.conn.user.jid ? '❍ PREMIUM' : '❒ prem-ʙᴏᴛ')}
