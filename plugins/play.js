@@ -530,15 +530,15 @@ async function handleDownload(m, conn, text, command, usedPrefix) {
         // ========== YTMP4 - Video ==========
         if (command === 'ytmp4') {
             await conn.reply(m.chat, `╭━━━━━━━━━━━━━╮
-│ ⏳ *DESCARGANDO...*
+│ ✎ *𝖣𝖾𝗌𝖼𝖺𝗋𝗀𝖺𝗇𝖽𝗈...*
 ╰━━━━━━━━━━━━━╯
 
-📹 *${title}*
+✧ *${title}*
 
-⚡ _Procesando video..._
-🎬 _Puede tardar unos minutos..._
+❍ 𝖯𝗋𝗈𝖼𝖾𝗌𝖺𝗇𝖽𝗈 𝗏𝗂𝖽𝖾𝗈...
+➢ 𝖯𝗎𝖾𝖽𝖾 𝗍𝖺𝗋𝖽𝖺𝗋 𝗎𝗇𝗈𝗌 𝗆𝗂𝗇𝗎𝗍𝗈𝗌...
 
-*『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』*`, m);
+*𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍*`, m);
 
             const dl = await downloadWithFallback(url, 'video');
             if (!dl.status) throw dl.error || '❌ Error al descargar';
@@ -575,7 +575,7 @@ async function handleDownload(m, conn, text, command, usedPrefix) {
         // ========== YTMP3DOC - Audio como documento ==========
         if (command === 'ytmp3doc') {
             await conn.reply(m.chat, `╭━━━━━━━━━━━━━╮
-│ 💿 *DESCARGANDO...*
+│ ✎ *DESCARGANDO...*
 ╰━━━━━━━━━━━━━╯
 
 🎵 *${title}*
@@ -617,7 +617,7 @@ async function handleDownload(m, conn, text, command, usedPrefix) {
         // ========== YTMP4DOC - Video como documento ==========
         if (command === 'ytmp4doc') {
             await conn.reply(m.chat, `╭━━━━━━━━━━━━━╮
-│ 🎥 *DESCARGANDO...*
+│ ✎ *DESCARGANDO...*
 ╰━━━━━━━━━━━━━╯
 
 📹 *${title}*
