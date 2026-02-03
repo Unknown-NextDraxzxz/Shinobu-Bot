@@ -7,8 +7,8 @@ const { generateWAMessageFromContent, prepareWAMessageMedia, proto } = pkg
 
 var handler = m => m
 handler.all = async function (m) { 
-global.canalIdM = ["120363399175402285@newsletter", "120363399175402285@newsletter"]
-global.canalNombreM = ["『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙-𝕸𝕯』", "『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』"]
+global.canalIdM = ["120363401983007420@newsletter", "120363401983007420@newsletter"]
+global.canalNombreM = ["ηєᴢυкσ-σғιᴄιαℓ ᴄнαηηєℓ•ʚᰔɞ", "ηєᴢυкσ-σғιᴄιαℓ ᴄнαηηєℓ•ʚᰔɞ"]
 global.channelRD = await getRandomChannel()
 
 global.d = new Date(new Date + 3600000)
@@ -19,11 +19,11 @@ global.mes = d.toLocaleDateString('es', {month: 'long'})
 global.año = d.toLocaleDateString('es', {year: 'numeric'})
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true})
 
-var canal = 'https://whatsapp.com/channel/0029Vb64nWqLo4hb8cuxe23n'  
-var comunidad = 'https://chat.whatsapp.com/KKwDZn5vDAE6MhZFAcVQeO'
-var git = 'https://github.com/Fer280809'
-var github = 'https://github.com/Fer280809/Asta-bot' 
-var correo = 'fer2809fl@gmail.com'
+var canal = 'https://whatsapp.com/channel/0029Vb5l5w1CHDyjovjN8s2V'  
+var comunidad = 'https://whatsapp.com/channel/0029Vb5l5w1CHDyjovjN8s2V'
+var git = 'https://github.com/'
+var github = 'https://github.com/' 
+var correo = 'support@gmail.com'
 global.redes = [canal, comunidad, git, github, correo].getRandom()
 
 global.nombre = m.pushName || 'Anónimo'
