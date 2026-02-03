@@ -32,9 +32,9 @@ let handler = async (m, { conn, usedPrefix }) => {
 
 ╰┈➤ ꕤ *#w / #work / #trabajar*
         ╰┈➤ Ganar coins trabajando  
-╰┈➤ ꕤ #slut / #prostituirse
+╰┈➤ ꕤ *#slut / #prostituirse*
         ╰┈➤ Ganar coins prostituyéndote  
-╰┈➤ ꕤ *#coinflip / #flip / #cf* + [cantidad] <cara/cruz>
+╰┈➤ ꕤ *#coinflip / #flip / #cf* + [cantidad] [cara/cruz]
         ╰┈➤ Apostar coins en cara o cruz  
 ╰┈➤ ꕤ *#crime / #crimen*
         ╰┈➤ Ganar coins rápido  
