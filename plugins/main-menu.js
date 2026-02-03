@@ -73,9 +73,9 @@ let handler = async (m, { conn, usedPrefix }) => {
         ╰┈➤ Curar salud para salir de aventuras  
 ╰┈➤ ꕤ #cazar / #hunt
         ╰┈➤ Cazar animales para ganar coins y exp  
-╰┈➤ 🎣 #fish / #pescar
+╰┈➤ ꕤ #fish / #pescar
         ╰┈➤ Ganar coins y exp pescando  
-╰┈➤ 🏰 #mazmorra / #dungeon
+╰┈➤ ꕤ #mazmorra / #dungeon
         ╰┈➤ Explorar mazmorras para ganar coins y exp  
   
 
