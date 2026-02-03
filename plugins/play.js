@@ -564,7 +564,7 @@ async function handleDownload(m, conn, text, command, usedPrefix) {
             await conn.sendMessage(m.chat, {
                 video: { url: dl.result.download },
                 mimetype: 'video/mp4',
-                caption: `🎬 *${title}*`,
+                caption: `✎ *${title}*`,
                 jpegThumbnail: thumbResized
             }, { quoted: fkontak });
 
