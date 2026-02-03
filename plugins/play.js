@@ -484,15 +484,15 @@ async function handleDownload(m, conn, text, command, usedPrefix) {
         // ========== YTMP3 - ENVIAR SIEMPRE COMO AUDIO REPRODUCIBLE ==========
         if (command === 'ytmp3') {
             await conn.reply(m.chat, `╭━━━━━━━━━━━━━╮
-│ ⏳ *DESCARGANDO...*
+│ ✎ *DESCARGANDO...*
 ╰━━━━━━━━━━━━━╯
 
-🎵 *${title}*
+✧ *${title}*
 
-⚡ _Procesando audio..._
-⌛ _Espera un momento..._
+❍ 𝖯𝗋𝗈𝖼𝖾𝗌𝖺𝗇𝖽𝗈 𝖺𝗎𝖽𝗂𝗈...
+➢ 𝖤𝗌𝗉𝖾𝗋𝖺 𝗎𝗇 𝗆𝗈𝗆𝖾𝗇𝗍𝗈...
 
-*『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』*`, m);
+*𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍*`, m);
 
             const dl = await downloadWithFallback(url, 'audio');
             if (!dl.status) throw dl.error || '❌ Error al descargar';
