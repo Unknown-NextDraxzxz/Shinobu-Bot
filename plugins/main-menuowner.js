@@ -15,7 +15,7 @@ let handler = async (m, { conn, args }) => {
     let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
     
     // URL de la imagen del menú
-    let menuImage = 'https://files.catbox.moe/lajq7h.jpg'
+    let menuImage = 'https://cdn.russellxz.click/a1dfd509.jpg'
     
     let txt = `🌟⭐ *${botname}* ⭐🌟
    
