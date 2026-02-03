@@ -85,31 +85,31 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos de Descargas para obtener archivos de varias fuentes  
 
-╰┈➤ 🎵 #tiktok / #tt + [Link] / [busqueda]
+╰┈➤ ꕤ #tiktok / #tt + [Link] / [busqueda]
         ╰┈➤ Descargar un video de TikTok  
-╰┈➤ 📱 #estados – Descarga estados de WhatsApp
+╰┈➤ ꕤ #estados – Descarga estados de WhatsApp
         ╰┈➤ Descarga estados de whatsapp
-╰┈➤ 📂 #mediafire / #mf + [Link]
+╰┈➤ ꕤ #mediafire / #mf + [Link]
         ╰┈➤ Descargar un archivo de MediaFire  
-╰┈➤ 📂 #mega / #mg + [Link]
+╰┈➤ ꕤ #mega / #mg + [Link]
         ╰┈➤ Descargar un archivo de MEGA  
-╰┈➤ 🎶 #play / play2 / ytmp3 / ytmp4 / ytmp3doc / ytmp4doc + [Cancion] / [Link]
+╰┈➤ ꕤ #play / play2 / ytmp3 / ytmp4 / ytmp3doc / ytmp4doc + [Cancion] / [Link]
         ╰┈➤ Descargar una canción o vídeo de YouTube  
-╰┈➤ 📘 #facebook / #fb + [Link]
+╰┈➤ ꕤ #facebook / #fb + [Link]
         ╰┈➤ Descargar un video de Facebook  
-╰┈➤ 🐦 #twitter / #x + [Link]
+╰┈➤ ꕤ #twitter / #x + [Link]
         ╰┈➤ Descargar un video de Twitter/X  
-╰┈➤ 🔩 #mods / #mod + [nombre]
+╰┈➤ ꕤ #mods / #mod + [nombre]
         ╰┈➤ Descargar un mods para minecraft 
-╰┈➤ 📸 #ig / #instagram + [Link]
+╰┈➤ ꕤ #ig / #instagram + [Link]
         ╰┈➤ Descargar un reel de Instagram  
-╰┈➤ 📌 #pinterest / #pin + [busqueda] / [Link]
+╰┈➤ ꕤ #pinterest / #pin + [busqueda] / [Link]
         ╰┈➤ Buscar y descargar imágenes de Pinterest  
-╰┈➤ 🔍 #image / #imagen + [busqueda]
+╰┈➤ ꕤ #image / #imagen + [busqueda]
         ╰┈➤ Buscar y descargar imágenes de Google  
-╰┈➤ 📱 #apk / #modapk + [busqueda]
+╰┈➤ ꕤ #apk / #modapk + [busqueda]
         ╰┈➤ Descargar un APK de Aptoide  
-╰┈➤ 🎥 #ytsearch / #search + [busqueda]
+╰┈➤ ꕤ #ytsearch / #search + [busqueda]
         ╰┈➤ Buscar videos de YouTube  
 
 
@@ -119,49 +119,49 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos de Gacha para reclamar y coleccionar personajes  
 
-╰┈➤ 🛒 #buycharacter / #buychar / #buyc + [nombre]
+╰┈➤ ꕤ #buycharacter / #buychar / #buyc + [nombre]
         ╰┈➤ Comprar un personaje en venta  
-╰┈➤ 🖼️ #charimage / #waifuimage / #cimage / #wimage + [nombre]
+╰┈➤ ꕤ #charimage / #waifuimage / #cimage / #wimage + [nombre]
         ╰┈➤ Ver una imagen aleatoria de un personaje  
-╰┈➤ ℹ️ #charinfo / #winfo / #waifuinfo + [nombre]
+╰┈➤ ꕤ #charinfo / #winfo / #waifuinfo + [nombre]
         ╰┈➤ Ver información de un personaje  
-╰┈➤ ✨ #claim / #c / #reclamar + {citar personaje}
+╰┈➤ ꕤ #claim / #c / #reclamar + {citar personaje}
         ╰┈➤ Reclamar un personaje  
-╰┈➤ 📝 #delclaimmsg
+╰┈➤ ꕤ #delclaimmsg
         ╰┈➤ Restablecer el mensaje al reclamar un personaje  
-╰┈➤ ❌ #deletewaifu / #delwaifu / #delchar + [nombre]
+╰┈➤ ꕤ #deletewaifu / #delwaifu / #delchar + [nombre]
         ╰┈➤ Eliminar un personaje reclamado  
-╰┈➤ ⭐ #favoritetop / #favtop
+╰┈➤ ꕤ #favoritetop / #favtop
         ╰┈➤ Ver el top de personajes favoritos  
-╰┈➤ 📊 #gachainfo / #ginfo / #infogacha
+╰┈➤ ꕤ #gachainfo / #ginfo / #infogacha
         ╰┈➤ Ver tu información de gacha  
-╰┈➤ 🎁 #giveallharem + [@usuario]
+╰┈➤ ꕤ #giveallharem + [@usuario]
         ╰┈➤ Regalar todos tus personajes a otro usuario  
-╰┈➤ 🎁 #givechar / #givewaifu / #regalar + [@usuario] [nombre]
+╰┈➤ ꕤ #givechar / #givewaifu / #regalar + [@usuario] [nombre]
         ╰┈➤ Regalar un personaje a otro usuario  
-╰┈➤ 🏴‍☠️ #robwaifu / #robarwaifu + [@usuario]
+╰┈➤ ꕤ #robwaifu / #robarwaifu + [@usuario]
         ╰┈➤ Robar un personaje a otro usuario  
-╰┈➤ 👥 #harem / #waifus / #claims + <@usuario>
+╰┈➤ ꕤ #harem / #waifus / #claims + <@usuario>
         ╰┈➤ Ver tus personajes reclamados  
-╰┈➤ 🏪 #haremshop / #tiendawaifus / #wshop + <pagina>
+╰┈➤ ꕤ #haremshop / #tiendawaifus / #wshop + <pagina>
         ╰┈➤ Ver los personajes en venta  
-╰┈➤ ❌ #removesale / #removerventa + [precio] [nombre]
+╰┈➤ ꕤ #removesale / #removerventa + [precio] [nombre]
         ╰┈➤ Eliminar un personaje en venta  
-╰┈➤ 🎲 #rollwaifu / #rw / #roll
+╰┈➤ ꕤ #rollwaifu / #rw / #roll
         ╰┈➤ Waifu o husbando aleatorio  
-╰┈➤ 💰 #sell / #vender + [precio] [nombre]
+╰┈➤ ꕤ #sell / #vender + [precio] [nombre]
         ╰┈➤ Poner un personaje a la venta  
-╰┈➤ 📚 #serieinfo / #ainfo / #animeinfo + [nombre]
+╰┈➤ ꕤ #serieinfo / #ainfo / #animeinfo + [nombre]
         ╰┈➤ Información de un anime  
-╰┈➤ 📜 #serielist / #slist / #animelist
+╰┈➤ ꕤ #serielist / #slist / #animelist
         ╰┈➤ Listar series del bot  
-╰┈➤ ✏️ #setclaimmsg / #setclaim + [mensaje]
+╰┈➤ ꕤ #setclaimmsg / #setclaim + [mensaje]
         ╰┈➤ Modificar el mensaje al reclamar un personaje  
-╰┈➤ 🔄 #trade / #intercambiar + [Tu personaje] / [Personaje 2]
+╰┈➤ ꕤ #trade / #intercambiar + [Tu personaje] / [Personaje 2]
         ╰┈➤ Intercambiar un personaje con otro usuario  
-╰┈➤ 🗳️ #vote / #votar + [nombre]
+╰┈➤ ꕤ #vote / #votar + [nombre]
         ╰┈➤ Votar por un personaje para subir su valor  
-╰┈➤ 🏆 #waifusboard / #waifustop / #topwaifus / #wtop + [número]
+╰┈➤ ꕤ #waifusboard / #waifustop / #topwaifus / #wtop + [número]
         ╰┈➤ Ver el top de personajes con mayor valor  
 
 
