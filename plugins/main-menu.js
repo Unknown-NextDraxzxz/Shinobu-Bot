@@ -44,8 +44,8 @@ Sub-Bot de Shinobu-BotᏪ
 > apostar coins en el casino  
 ꕤ *#balance / #bal / #bank* + <usuario>
 > ver cuantos coins tienes en el banco  
-ꕤ *#deposit / #dep / #depositar / #d* + [cantidad] | aal
-> Depositar tus coins en el banco  
+╰┈➤ 💳 *#deposit / #dep / #depositar / #d* + [cantidad] | all
+        ╰┈➤ Depositar tus coins en el banco  
 ╰┈➤ 💸 *#withdraw / #with / #retirar* + [cantidad] | all
         ╰┈➤ Retirar tus coins del banco  
 ╰┈➤ 📊 *#economyinfo / #einfo*
