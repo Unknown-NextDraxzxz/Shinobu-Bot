@@ -29,59 +29,75 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┏━━━━━━━━━━━━━━┓
 *💰 ECONOMY*  
 ┗━━━━━━━━━━━━━━┛
-ꕤ *#w / #work / #trabajar*
-> Ganar coins trabajando  
-ꕤ #slut / #prostituirse
-> Ganar coins prostituyéndote  
-ꕤ *#coinflip / #flip / #cf* + [cantidad] [cara/cruz]
-> Apostar coins en cara o cruz  
-ꕤ *#crime / #crimen*
-> Ganar coins rápido  
-ꕤ *#roulette / #rt* + [red/black] [cantidad]
-> Apostar coins en la ruleta  
-ꕤ *#casino / #apostar / #slot* + [cantidad]
-> Apostar coins en el casino  
-ꕤ *#balance / #bal / #bank* + <usuario>
-> Ver cuantos coins tienes en el banco  
-ꕤ *#deposit / #dep / #depositar / #d* + [cantidad] | all
-> Depositar tus coins en el banco  
-ꕤ *#withdraw / #with / #retirar* + [cantidad] | all
-> Retirar tus coins del banco  
-ꕤ *#economyinfo / #einfo*
-> Ver tu información de economía  
-ꕤ *#givecoins / #pay / #coinsgive* + [usuario] [cantidad]
-> Dar coins a un usuario  
-ꕤ *#miming / #minar / #mine*
-> Realizar trabajos de minería y ganar coins  
-ꕤ *#daily / #diario*
-> Reclamar tu recompensa diaria  
-ꕤ *#cofre / #coffer*
-> Reclamar tu cofre diario  
-ꕤ *#weekly / #semanal*
-> Reclamar tu recompensa semanal  
-ꕤ *#monthly / #mensual*
-> Reclamar tu recompensa mensual  
-ꕤ *#steal / #robar / #rob* + [@mencion]
-> Intentar robar coins a un usuario  
 
-ꕤ *#economyboard / #eboard / #baltop* + <pagina>
-> Ver el ranking económico del grupo  
+ꕤ *#w / #work / #trabajar*
+> Ganar coins trabajando
+
+ꕤ *#slut / #prostituirse*
+> Ganar coins prostituyéndote
+
+ꕤ *#coinflip / #cf* + [cantidad] [cara/cruz]
+> Apostar coins en cara o cruz
+
+ꕤ *#crime / #crimen*
+> Ganar coins rápido
+
+ꕤ *#roulette / #rt* + [color] [cantidad]
+> Apostar coins en la ruleta
+
+ꕤ *#casino / #slot* + [cantidad]
+> Apostar coins en el casino
+
+ꕤ *#balance / #bank* + <usuario>
+> Ver cuántos coins tienes en el banco
+
+ꕤ *#deposit / #d* + [cantidad] | all
+> Depositar tus coins en el banco
+
+ꕤ *#withdraw / #retirar* + [cantidad] | all
+> Retirar tus coins del banco
+
+ꕤ *#economyinfo / #einfo*
+> Ver tu información de economía
+
+ꕤ *#givecoins / #pay* + [usuario] [cantidad]
+> Dar coins a un usuario
+
+ꕤ *#mine / #minar*
+> Realizar trabajos de minería
+
+ꕤ *#daily / #diario*
+> Reclamar tu recompensa diaria
+
+ꕤ *#cofre / #coffer*
+> Reclamar tu cofre diario
+
+ꕤ *#weekly / #semanal*
+> Reclamar tu recompensa semanal
+
+ꕤ *#monthly / #mensual*
+> Reclamar tu recompensa mensual
+
+ꕤ *#steal / #robar* + [@mencion]
+> Intentar robar coins a un usuario
+
+ꕤ *#baltop / #eboard* + <pagina>
+> Ver el ranking económico del grupo
 
 ꕤ *#aventura / #adventure*
-> Aventuras para ganar coins y exp  
+> Aventuras para ganar coins y exp
 
 ꕤ *#curar / #heal*
-> Curar salud para salir de aventuras  
+> Curar salud para salir de aventuras
 
 ꕤ *#cazar / #hunt*
-> Cazar animales para ganar coins y exp  
+> Cazar animales para ganar coins
 
 ꕤ *#fish / #pescar*
-> Ganar coins y exp pescando  
+> Ganar coins y exp pescando
 
 ꕤ *#mazmorra / #dungeon*
-> Explorar mazmorras para ganar coins y exp  
-
+> Explorar mazmorras para ganar coins
 ┏━━━━━━━━━━━━━━┓
 *DOWNLOAD*  
 ┗━━━━━━━━━━━━━━┛
