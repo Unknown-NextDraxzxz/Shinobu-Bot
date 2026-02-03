@@ -505,7 +505,7 @@ async function handleDownload(m, conn, text, command, usedPrefix) {
                 message: {
                     documentMessage: {
                         title: `🎵「 ${title} 」⚡`,
-                        fileName: `Descargas Asta-Bot`,
+                        fileName: `Descargas 𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍`,
                         jpegThumbnail: thumbResized
                     }
                 }
@@ -551,7 +551,7 @@ async function handleDownload(m, conn, text, command, usedPrefix) {
                 message: {
                     documentMessage: {
                         title: `🎬「 ${title} 」⚡`,
-                        fileName: `Descargas Asta-Bot`,
+                        fileName: `Descargas 𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍`,
                         jpegThumbnail: thumbResized
                     }
                 }
@@ -578,13 +578,13 @@ async function handleDownload(m, conn, text, command, usedPrefix) {
 │ ✎ *DESCARGANDO...*
 ╰━━━━━━━━━━━━━╯
 
-🎵 *${title}*
+✧ *${title}*
 
-📄 _Formato: Documento MP3_
-⚡ _Procesando audio..._
-⏳ _Aguarda un momento..._
+❍ 𝖥𝗈𝗋𝗆𝖺𝗍𝗈: 𝖣𝗈𝖼𝗎𝗆𝖾𝗇𝗍𝗈 𝖬𝖯𝟥
+ꕤ 𝖯𝗋𝗈𝖼𝖾𝗌𝖺𝗇𝖽𝗈 𝖺𝗎𝖽𝗂𝗈...
+➢ 𝖠𝗀𝗎𝖺𝗋𝖽𝖺 𝗎𝗇 𝗆𝗈𝗆𝖾𝗇𝗍𝗈...
 
-*『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』*`, m);
+*𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍*`, m);
 
             const dl = await downloadWithFallback(url, 'audio');
             if (!dl.status) throw dl.error || '❌ Error al descargar';
@@ -596,7 +596,7 @@ async function handleDownload(m, conn, text, command, usedPrefix) {
                 message: {
                     documentMessage: {
                         title: `👑「 ${title} 」📿`,
-                        fileName: `Descargas Asta-Bot`,
+                        fileName: `Descargas 𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍`,
                         jpegThumbnail: thumbResized
                     }
                 }
@@ -620,13 +620,13 @@ async function handleDownload(m, conn, text, command, usedPrefix) {
 │ ✎ *DESCARGANDO...*
 ╰━━━━━━━━━━━━━╯
 
-📹 *${title}*
+✧ *${title}*
 
-📄 _Formato: Documento MP4_
-⚡ _Procesando video..._
-⏳ _Archivos grandes pueden tardar..._
+❍ _Formato: Documento MP4_
+ꕤ _Procesando video..._
+➢ _Archivos grandes pueden tardar..._
 
-*『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』*`, m);
+*𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍*`, m);
 
             const dl = await downloadWithFallback(url, 'video');
             if (!dl.status) throw dl.error || '❌ Error al descargar';
@@ -642,7 +642,7 @@ async function handleDownload(m, conn, text, command, usedPrefix) {
                 message: {
                     documentMessage: {
                         title: `🎬「 ${title} 」⚡`,
-                        fileName: `Descargas Asta-Bot`,
+                        fileName: `Descargas 𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍`,
                         jpegThumbnail: thumbResized
                     }
                 }
@@ -653,7 +653,7 @@ async function handleDownload(m, conn, text, command, usedPrefix) {
                 mimetype: 'video/mp4',
                 fileName: `${title}.mp4`,
                 jpegThumbnail: thumbResized,
-                caption: `🎬 *${title}*`
+                caption: `✎ *${title}*`
             }, { quoted: fkontak });
 
             await m.react('✅');
