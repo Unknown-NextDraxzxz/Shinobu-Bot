@@ -479,7 +479,7 @@ let handler = async (m, { conn, usedPrefix }) => {
         ╰┈➤ manda un video de mamando `;
 
   let buttons = [
-      { buttonId: usedPrefix + 'code', buttonText: { displayText: '🤖 Sup-Bot' }, type: 1 }
+      { buttonId: usedPrefix + 'code', buttonText: { displayText: 'Sub-Bot' }, type: 1 }
   ];
 
   // URL de la imagen o video (cambia por tu propia URL)
