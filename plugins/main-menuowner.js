@@ -17,10 +17,10 @@ let handler = async (m, { conn, args }) => {
     // URL de la imagen del menú
     let menuImage = 'https://cdn.russellxz.click/a1dfd509.jpg'
     
-    let txt = `🌟⭐ *${botname}* ⭐🌟
+    let txt = `✎Ꮺ *${botname}* Ꮺ
    
 ╭─━━━━━━━━━━━━━━━─╮
-│ 🎭 ¡Hola @${userId.split('@')[0]}! 💖
+│ ꕤ ¡Hola @${userId.split('@')[0]}!
 ╰─━━━━━━━━━━━━━━━─╯
 
 ╭─═⊰ ❀ 𝐄𝐒𝐓𝐀𝐃𝐎 𝐀𝐂𝐓𝐈𝐕𝐎
