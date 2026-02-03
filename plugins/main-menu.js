@@ -26,7 +26,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 𝖲𝗎𝖻-𝖡𝗈𝗍 𝖽𝖾 𝖲𝗁𝗂𝗇o𝖻𝗎
 
 ┏━━━━━━━━━━━━━━┓
-*ECONOMY*  
+        𝖤𝖢𝖮𝖭𝖮𝖬𝖸  
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos de Economía para ganar dinero.  
 
@@ -81,7 +81,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 
 
 ┏━━━━━━━━━━━━━━┓
-📥 DOWNLOAD  
+       𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣  
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos de Descargas para obtener archivos de varias fuentes  
 
@@ -115,7 +115,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 
 
 ┏━━━━━━━━━━━━━━┓
-🎴 GACHA  
+         𝖦𝖠𝖢𝖧𝖠  
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos de Gacha para reclamar y coleccionar personajes  
 
@@ -167,7 +167,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 
 
 ┏━━━━━━━━━━━━━━┓
-🔌 SOCKETS  
+         𝖲𝖮𝖢𝖪𝖤𝖳𝖲  
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos para registrar tu propio Bot  
 
@@ -193,7 +193,7 @@ let handler = async (m, { conn, usedPrefix }) => {
         ╰┈➤ Cambiar el nombre de usuario  
 
 ┏━━━━━━━━━━━━━━┓
-🛠️ UTILITIES  
+         𝖴𝖳𝖨𝖫𝖨𝖳𝖨𝖤𝖲  
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos de Utilidades  
 
@@ -248,7 +248,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 
 
 ┏━━━━━━━━━━━━━━┓
-👤 PROFILES  
+         𝖯𝖱𝖮𝖥𝖨𝖫𝖤𝖲  
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos de Perfil para ver y configurar tu perfil  
 
@@ -281,7 +281,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 
 
 ┏━━━━━━━━━━━━━━┓
-👥 GROUPS  
+         𝖦𝖱𝖮𝖴𝖯𝖲  
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos para Administradores de grupos  
 
@@ -353,7 +353,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 
 
 ┏━━━━━━━━━━━━━━┓
-🎌 ANIME  
+          𝖠𝖭𝖨𝖬𝖤  
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos de reacciones de anime  
 
@@ -461,7 +461,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 
 
 ┏━━━━━━━━━━━━━━┓
-*🔞 NSFW*  
+          𝖭𝖲𝖥𝖶  
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos NSFW  
 
