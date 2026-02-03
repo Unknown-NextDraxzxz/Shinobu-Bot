@@ -29,7 +29,6 @@ Sub-Bot de Shinobu-BotᏪ
 *💰 ECONOMY*  
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos de Economía para ganar dinero.  
-
 ꕤ #w / #work / #trabajar
 > Ganar coins trabajando  
 ꕤ #slut / #prostituirse
@@ -432,8 +431,6 @@ Sub-Bot de Shinobu-BotᏪ
 > Buscar una waifu aleatoria  
 ꕤ *#ppcouple / #ppcp*
 > Genera imágenes para amistades o parejas  
-
-
 
 ┏━━━━━━━━━━━━━━┓
 *NSFW*  
