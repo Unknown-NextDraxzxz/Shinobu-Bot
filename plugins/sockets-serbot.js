@@ -141,7 +141,7 @@ if (m?.chat) {
 txtQR = await conn.sendMessage(m.chat, { image: await qrcode.toBuffer(qr, { scale: 8 }), caption: rtx.trim()}, { quoted: m})
 await conn.sendMessage(m.chat, {
 image: { url: imagenSerBot },
-caption: '🤖 *Sub-Bot de Asta*\n\n¡Escanea el QR de arriba! ⬆️'
+caption: '🤖 *Sub-Bot de Shinobu*\n\n¡Escanea el QR de arriba! ⬆️'
 }, { quoted: m })
 } else {
 return 
