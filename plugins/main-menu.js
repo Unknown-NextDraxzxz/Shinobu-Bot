@@ -357,105 +357,105 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos de reacciones de anime  
 
-╰┈➤ 😡 #angry / #enojado + <mencion>
+╰┈➤ ꕤ #angry / #enojado + <mencion>
         ╰┈➤ Estar enojado  
-╰┈➤ 🛁 #bath / #bañarse + <mencion>
+╰┈➤ ꕤ #bath / #bañarse + <mencion>
         ╰┈➤ Bañarse  
-╰┈➤ 🐍 #bite / #morder + <mencion>
+╰┈➤ ꕤ #bite / #morder + <mencion>
         ╰┈➤ Muerde a alguien  
-╰┈➤ 😛 #bleh / #lengua + <mencion>
+╰┈➤ ꕤ #bleh / #lengua + <mencion>
         ╰┈➤ Sacar la lengua  
-╰┈➤ 😊 #blush / #sonrojarse + <mencion>
+╰┈➤ ꕤ #blush / #sonrojarse + <mencion>
         ╰┈➤ Sonrojarte  
-╰┈➤ 😒 #bored / #aburrido + <mencion>
+╰┈➤ ꕤ #bored / #aburrido + <mencion>
         ╰┈➤ Estar aburrido  
-╰┈➤ 👏 #clap / #aplaudir + <mencion>
+╰┈➤ ꕤ #clap / #aplaudir + <mencion>
         ╰┈➤ Aplaudir  
-╰┈➤ ☕ #coffee / #cafe / #café + <mencion>
+╰┈➤ ꕤ #coffee / #cafe / #café + <mencion>
         ╰┈➤ Tomar café  
-╰┈➤ 😢 #cry / #llorar + <mencion>
+╰┈➤ ꕤ #cry / #llorar + <mencion>
         ╰┈➤ Llorar por algo o alguien  
-╰┈➤ 🤗 #cuddle / #acurrucarse + <mencion>
+╰┈➤ ꕤ #cuddle / #acurrucarse + <mencion>
         ╰┈➤ Acurrucarse  
-╰┈➤ 💃 #dance / #bailar + <mencion>
+╰┈➤ ꕤ #dance / #bailar + <mencion>
         ╰┈➤ Sacate los pasitos prohibidos  
-╰┈➤ 🎭 #dramatic / #drama + <mencion>
+╰┈➤ ꕤ #dramatic / #drama + <mencion>
         ╰┈➤ Drama  
-╰┈➤ 🍺 #drunk / #borracho + <mencion>
+╰┈➤ ꕤ #drunk / #borracho + <mencion>
         ╰┈➤ Estar borracho  
-╰┈➤ 🍴 #eat / #comer + <mencion>
+╰┈➤ ꕤ #eat / #comer + <mencion>
         ╰┈➤ Comer algo delicioso  
-╰┈➤ 🤦 #facepalm / #palmada + <mencion>
+╰┈➤ ꕤ #facepalm / #palmada + <mencion>
         ╰┈➤ Darte una palmada en la cara  
-╰┈➤ 😄 #happy / #feliz + <mencion>
+╰┈➤ ꕤ #happy / #feliz + <mencion>
         ╰┈➤ Salta de felicidad  
-╰┈➤ 🤗 #hug / #abrazar + <mencion>
+╰┈➤ ꕤ #hug / #abrazar + <mencion>
         ╰┈➤ Dar un abrazo  
-╰┈➤ 🤰 #impregnate / #preg / #preñar / #embarazar + <mencion>
+╰┈➤ ꕤ #impregnate / #preg / #preñar / #embarazar + <mencion>
         ╰┈➤ Embarazar a alguien  
-╰┈➤ 🔪 #kill / #matar + <mencion>
+╰┈➤ ꕤ #kill / #matar + <mencion>
         ╰┈➤ Toma tu arma y mata a alguien  
-╰┈➤ 😘 #kiss / #muak + <mencion>
+╰┈➤ ꕤ #kiss / #muak + <mencion>
         ╰┈➤ Dar un beso  
-╰┈➤ 😚 #kisscheek / #beso + <mencion>
+╰┈➤ ꕤ #kisscheek / #beso + <mencion>
         ╰┈➤ Beso en la mejilla  
-╰┈➤ 😂 #laugh / #reirse + <mencion>
+╰┈➤ ꕤ #laugh / #reirse + <mencion>
         ╰┈➤ Reírte de algo o alguien  
-╰┈➤ 👅 #lick / #lamer + <mencion>
+╰┈➤ ꕤ #lick / #lamer + <mencion>
         ╰┈➤ Lamer a alguien  
-╰┈➤ ❤️ #love / #amor / #enamorado / #enamorada + <mencion>
+╰┈➤ ꕤ #love / #amor / #enamorado / #enamorada + <mencion>
         ╰┈➤ Sentirse enamorado  
-╰┈➤ ✋ #pat / #palmadita / #palmada + <mencion>
+╰┈➤ ꕤ #pat / #palmadita / #palmada + <mencion>
         ╰┈➤ Acaricia a alguien  
-╰┈➤ 👉 #poke / #picar + <mencion>
+╰┈➤ ꕤ #poke / #picar + <mencion>
         ╰┈➤ Picar a alguien  
-╰┈➤ 😗 #pout / #pucheros + <mencion>
+╰┈➤ ꕤ #pout / #pucheros + <mencion>
         ╰┈➤ Hacer pucheros  
-╰┈➤ 👊 #punch / #pegar / #golpear + <mencion>
+╰┈➤ ꕤ #punch / #pegar / #golpear + <mencion>
         ╰┈➤ Dar un puñetazo  
-╰┈➤ 🏃 #run / #correr + <mencion>
+╰┈➤ ꕤ #run / #correr + <mencion>
         ╰┈➤ Correr  
-╰┈➤ 😔 #sad / #triste + <mencion>
+╰┈➤ ꕤ #sad / #triste + <mencion>
         ╰┈➤ Expresar tristeza  
-╰┈➤ 😱 #scared / #asustado / #asustada + <mencion>
+╰┈➤ ꕤ #scared / #asustado / #asustada + <mencion>
         ╰┈➤ Estar asustado  
-╰┈➤ 😏 #seduce / #seducir* + <mencion>
+╰┈➤ ꕤ #seduce / #seducir* + <mencion>
         ╰┈➤ Seducir a alguien  
-╰┈➤ 😳 #shy / #timido / #timida + <mencion>
+╰┈➤ ꕤ #shy / #timido / #timida + <mencion>
         ╰┈➤ Sentir timidez  
-╰┈➤ 👋 #slap / #bofetada + <mencion>
+╰┈➤ ꕤ #slap / #bofetada + <mencion>
         ╰┈➤ Dar una bofetada  
-╰┈➤ 💤 #sleep / #dormir + <mencion>
+╰┈➤ ꕤ #sleep / #dormir + <mencion>
         ╰┈➤ Tumbarte a dormir  
-╰┈➤ 🚬 #smoke / #fumar + <mencion>
+╰┈➤ ꕤ #smoke / #fumar + <mencion>
         ╰┈➤ Fumar  
-╰┈➤ 😤 #spit / #escupir + <mencion>
+╰┈➤ ꕤ #spit / #escupir + <mencion>
         ╰┈➤ Escupir  
-╰┈➤ 👣 #step / #pisar + <mencion>
+╰┈➤ ꕤ #step / #pisar + <mencion>
         ╰┈➤ Pisar a alguien  
-╰┈➤ 🤔 #think / #pensar + <mencion>
+╰┈➤ ꕤ #think / #pensar + <mencion>
         ╰┈➤ Pensar en algo  
-╰┈➤ 🚶 #walk / #caminar + <mencion>
+╰┈➤ ꕤ #walk / #caminar + <mencion>
         ╰┈➤ Caminar  
-╰┈➤ 😉 #wink / #guiñar + <mencion>
+╰┈➤ ꕤ #wink / #guiñar + <mencion>
         ╰┈➤ Guiñar el ojo  
-╰┈➤ 😳 #cringe / #avergonzarse + <mencion>
+╰┈➤ ꕤ #cringe / #avergonzarse + <mencion>
         ╰┈➤ Sentir vergüenza ajena  
-╰┈➤ 😎 #smug / #presumir + <mencion>
+╰┈➤ ꕤ #smug / #presumir + <mencion>
         ╰┈➤ Presumir con estilo  
-╰┈➤ 🙂 #smile / #sonreir + <mencion>
+╰┈➤ ꕤ #smile / #sonreir + <mencion>
         ╰┈➤ Sonreír con ternura  
-╰┈➤ ✋ #highfive / #5 + <mencion>
+╰┈➤ ꕤ #highfive / #5 + <mencion>
         ╰┈➤ Chocar los cinco  
-╰┈➤ 😈 #bully / #bullying + <mencion>
+╰┈➤ ꕤ #bully / #bullying + <mencion>
         ╰┈➤ Molestar a alguien  
-╰┈➤ 🤝 #handhold / #mano + <mencion>
+╰┈➤ ꕤ #handhold / #mano + <mencion>
         ╰┈➤ Tomarse de la mano  
-╰┈➤ 👋 #wave / #ola / #hola + <mencion>
+╰┈➤ ꕤ #wave / #ola / #hola + <mencion>
         ╰┈➤ Saludar con la mano  
-╰┈➤ 💞 #waifu
+╰┈➤ ꕤ #waifu
         ╰┈➤ Buscar una waifu aleatoria  
-╰┈➤ 💑 #ppcouple / #ppcp
+╰┈➤ ꕤ #ppcouple / #ppcp
         ╰┈➤ Genera imágenes para amistades o parejas  
 
 
@@ -465,17 +465,17 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos NSFW  
 
-╰┈➤ 🔞 *#danbooru / #dbooru* + [Tags]
+╰┈➤ ꕤ #danbooru / #dbooru + [Tags]
         ╰┈➤ Buscar imágenes en Danbooru  
-╰┈➤ 🔞 *#gelbooru / #gbooru* + [Tags]
+╰┈➤ ꕤ #gelbooru / #gbooru + [Tags]
         ╰┈➤ Buscar imágenes en Gelbooru  
-╰┈➤ 🔞 *#rule34 / #r34* + [Tags]
+╰┈➤ ꕤ #rule34 / #r34 + [Tags]
         ╰┈➤ Buscar imágenes en Rule34  
-╰┈➤ 🎥 *#xvideos / #xvideosdl* + [Link]
+╰┈➤ ꕤ #xvideos / #xvideosdl + [Link]
         ╰┈➤ Descargar un video de Xvideos  
-╰┈➤ 🎥 *#xnxx / #xnxxdl* + [Link]
+╰┈➤ ꕤ #xnxx / #xnxxdl + [Link]
         ╰┈➤ Descargar un video de Xnxx  
-╰┈➤ 💦 *#mamada*  
+╰┈➤ ꕤ #mamada  
         ╰┈➤ manda un video de mamando `;
 
   let buttons = [
