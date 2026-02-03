@@ -395,38 +395,38 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
         const cleanAuthor = author.name.substring(0, 50);
 
         const body = `╭━━━━━━━━━━━━━╮
-│ 🎵 *YouTube Play*
+│ ꕤ *YouTube Play*
 ╰━━━━━━━━━━━━━╯
 
-📹 *${cleanTitle}*
+✎ *${cleanTitle}*
 
-👤 Canal: ${cleanAuthor}
-👁️ Vistas: ${vistas}
-⏱️ Duración: ${timestamp}
-📅 Publicado: ${ago}
-🔗 Link: ${url}
+✧ Canal: ${cleanAuthor}
+◎ Vistas: ${vistas}
+❀ Duración: ${timestamp}
+⌗ Publicado: ${ago}
+➢ Link: ${url}
 
 *Elige una opción:*`;
 
         const buttons = [
-            { buttonId: `${usedPrefix}ytmp3 ${url}`, buttonText: { displayText: '🎧 Audio' } },
-            { buttonId: `${usedPrefix}ytmp4 ${url}`, buttonText: { displayText: '📽️ Video' } },
-            { buttonId: `${usedPrefix}ytmp3doc ${url}`, buttonText: { displayText: '💿 Audio Doc' } },
-            { buttonId: `${usedPrefix}ytmp4doc ${url}`, buttonText: { displayText: '🎥 Video Doc' } }
+            { buttonId: `${usedPrefix}ytmp3 ${url}`, buttonText: { displayText: '𝖠𝗎𝖽𝗂𝗈' } },
+            { buttonId: `${usedPrefix}ytmp4 ${url}`, buttonText: { displayText: '𝖵𝗂𝖽𝖾𝗈' } },
+            { buttonId: `${usedPrefix}ytmp3doc ${url}`, buttonText: { displayText: '𝖠𝗎𝖽𝗂𝗈 𝖣𝗈𝖼' } },
+            { buttonId: `${usedPrefix}ytmp4doc ${url}`, buttonText: { displayText: '𝖵𝗂𝖽𝖾𝗈 𝖣𝗈𝖼' } }
         ];
 
         try {
             await conn.sendMessage(m.chat, {
                 image: { url: thumbnail },
                 caption: body,
-                footer: `『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』⚡`,
+                footer: `𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍`,
                 buttons: buttons,
                 viewOnce: true,
                 headerType: 4
             }, { quoted: m });
         } catch (e1) {
             try {
-                await conn.sendButton(m.chat, body, `『𝕬𝖘𝖙𝖆-𝕭𝖔𝖙』⚡`, thumbnail, buttons, m);
+                await conn.sendButton(m.chat, body, `𝖲𝗁𝗂𝗇𝗈𝖻𝗎 - 𝖡𝗈𝗍`, thumbnail, buttons, m);
             } catch (e2) {
                 try {
                     await conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', body + `\n\n*Comandos disponibles:*\n• ${usedPrefix}ytmp3 ${url}\n• ${usedPrefix}ytmp4 ${url}\n• ${usedPrefix}ytmp3doc ${url}\n• ${usedPrefix}ytmp4doc ${url}`, m);
@@ -446,7 +446,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
 
 async function handleDownload(m, conn, text, command, usedPrefix) {
     if (!text?.trim()) {
-        return conn.reply(m.chat, `❌ Ingresa una URL o nombre.\n\n📝 Ejemplo: *${usedPrefix + command} Bad Bunny*`, m);
+        return conn.reply(m.chat, `❌ Ingresa una URL o nombre.\n\n✎ Ejemplo: *${usedPrefix + command} Bad Bunny*`, m);
     }
 
     await m.react('⏳');
