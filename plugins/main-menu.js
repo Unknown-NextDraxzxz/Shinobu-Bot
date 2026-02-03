@@ -30,19 +30,19 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos de *Economía* para ganar dinero.  
 
-╰┈➤ ꕤ *#w / #work / #trabajar*
+╰┈➤ ꕤ *#w | #work | #trabajar*
         ╰┈➤ Ganar coins trabajando  
-╰┈➤ ꕤ *#slut / #prostituirse*
+╰┈➤ ꕤ *#slut | #prostituirse*
         ╰┈➤ Ganar coins prostituyéndote  
-╰┈➤ ꕤ *#coinflip / #flip / #cf* + [cantidad] <cara/cruz>
+╰┈➤ ꕤ *#coinflip | #flip | #cf* + [cantidad] <cara/cruz>
         ╰┈➤ Apostar coins en cara o cruz  
-╰┈➤ ꕤ *#crime / #crimen*
+╰┈➤ ꕤ *#crime | #crimen*
         ╰┈➤ Ganar coins rápido  
-╰┈➤ ꕤ *#roulette / #rt* + [red/black] [cantidad]
+╰┈➤ ꕤ *#roulette | #rt* + [red/black] [cantidad]
         ╰┈➤ Apostar coins en la ruleta  
-╰┈➤ ꕤ *#casino / #apostar / #slot* + [cantidad]
+╰┈➤ ꕤ *#casino | #apostar | #slot* + [cantidad]
         ╰┈➤ Apostar coins en el casino  
-╰┈➤ ꕤ *#balance / #bal / #bank* + <usuario>
+╰┈➤ ꕤ *#balance | #bal | #bank* + <usuario>
         ╰┈➤ Ver cuantos coins tienes en el banco  
 ╰┈➤ ꕤ *#deposit / #dep / #depositar / #d* + [cantidad] | all
         ╰┈➤ Depositar tus coins en el banco  
