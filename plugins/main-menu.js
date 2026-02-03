@@ -30,12 +30,12 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos de *Economía* para ganar dinero.  
 
-ꕤ #w / #work / #trabajar
-✿ Ganar coins trabajando  
-ꕤ *#slut / #prostituirse*
-✿ Ganar coins prostituyéndote  
-ꕤ *#coinflip / #flip / #cf* + [cantidad] <cara/cruz>
-✿ Apostar coins en cara o cruz  
+╰┈➤ 💼 *#w / #work / #trabajar*
+        ╰┈➤ Ganar coins trabajando  
+╰┈➤ 💃 *#slut / #prostituirse*
+        ╰┈➤ Ganar coins prostituyéndote  
+╰┈➤ 🎲 *#coinflip / #flip / #cf* + [cantidad] <cara/cruz>
+        ╰┈➤ Apostar coins en cara o cruz  
 ╰┈➤ 🚨 *#crime / #crimen*
         ╰┈➤ Ganar coins rápido  
 ╰┈➤ 🎯 *#roulette / #rt* + [red/black] [cantidad]
