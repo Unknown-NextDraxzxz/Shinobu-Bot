@@ -21,7 +21,7 @@ Me llamo『 𝕬𝖘𝖙𝖆-𝕭𝖔𝖙 』⚡
 │ ➣ Servidor: Oculto
 │ ➢ Ping: Online
 │ ➣ Version: ${vs}
-│ ➢ Modo: ${(conn.user.jid == global.conn.user.jid ? 'Privado : 'Publico)}
+│ ➢ Modo: ${(conn.user.jid == global.conn.user.jid ? 'Privado : 'Publico')}
 ╰───────────────╯
 
 
