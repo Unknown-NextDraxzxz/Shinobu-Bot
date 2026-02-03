@@ -26,17 +26,17 @@ let handler = async (m, { conn, usedPrefix }) => {
 𝖲𝗎𝖻-𝖡𝗈𝗍 𝖽𝖾 𝖲𝗁𝗂𝗇𝗈𝖻𝗎
 
 ┏━━━━━━━━━━━━━━┓
-*💰 ECONOMY*  
+*ECONOMY*  
 ┗━━━━━━━━━━━━━━┛
 ╰┈➤ ✿ Comandos de *Economía* para ganar dinero.  
 
-╰┈➤ ꕤ *#w | #work | #trabajar*
+╰┈➤ ꕤ #w | #work | #trabajar
         ╰┈➤ Ganar coins trabajando  
-╰┈➤ ꕤ *#slut | #prostituirse*
+╰┈➤ ꕤ #slut | #prostituirse*
         ╰┈➤ Ganar coins prostituyéndote  
-╰┈➤ ꕤ *#coinflip | #flip | #cf* + [cantidad] <cara/cruz>
+╰┈➤ ꕤ #coinflip | #flip | #cf + [cantidad] <cara/cruz>
         ╰┈➤ Apostar coins en cara o cruz  
-╰┈➤ ꕤ *#crime | #crimen*
+╰┈➤ ꕤ #crime | #crimen
         ╰┈➤ Ganar coins rápido  
 ╰┈➤ ꕤ *#roulette | #rt* + [red/black] [cantidad]
         ╰┈➤ Apostar coins en la ruleta  
