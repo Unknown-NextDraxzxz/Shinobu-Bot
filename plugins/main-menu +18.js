@@ -8,20 +8,20 @@ let handler = async (m, { conn, usedPrefix }) => {
   let userId = m.sender;
   
   let infoText = `╭─━━━━━━━━━━━━━━━─╮
-│ 🎭 ¡Hola @${userId.split('@')[0]}! 💖
+│ ꕤ ¡Hola @${userId.split('@')[0]}! 💖
 ╰─━━━━━━━━━━━━━━━─╯
 
 Me llamo『 𝕬𝖘𝖙𝖆-𝕭𝖔𝖙 』⚡
 
-╭─═⊰ 📡 𝐄𝐒𝐓𝐀𝐃𝐎 𝐀𝐂𝐓𝐈𝐕𝐎
-│ 🤖 Estado: ${(conn.user.jid == global.conn.user.jid ? '🟢 PREMIUM' : '🔗 prem-ʙᴏᴛ')}
-│ 👥 Users: 『${totalreg.toLocaleString()}』🔥
-│ 🛠️ Comandos: 『${totalCommands}』⚙️
-│ 📅 Librería » ${libreria}
-│ 🌍 Servidor: México 🇲🇽
-│ 📡 Ping: Online ✅
-│ 💾 Version: ${vs}
-│ 🔒 Modo: ${(conn.user.jid == global.conn.user.jid ? '🔐 PRIVADO' : '🔓 PUBLICO')}
+╭─═⊰ ❀ 𝐄𝐒𝐓𝐀𝐃𝐎 𝐀𝐂𝐓𝐈𝐕𝐎
+│ ➣ Estado: ${(conn.user.jid == global.conn.user.jid ? '❍ PREMIUM' : '❒ prem-ʙᴏᴛ')}
+│ ➢ Users: ${totalreg.toLocaleString()}
+│ ➣ Comandos: ${totalCommands}
+│ ➢ Librería » ${libreria}
+│ ➣ Servidor: Oculto
+│ ➢ Ping: Online
+│ ➣ Version: ${vs}
+│ ➢ Modo: ${(conn.user.jid == global.conn.user.jid ? 'Privado : 'Publico)}
 ╰───────────────╯
 
 
