@@ -146,8 +146,8 @@ try {
     return conn.reply(m.chat, `⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${err.message}`, m)
 }}
 
-handler.help = ['suggest', 'reporte', 'invite', 'speedtest', 'fixmsg', 'script']
+handler.help = ['suggest', 'reporte', 'invite', 'speedtest', 'fixmsg']
 handler.tags = ['main']
-handler.command = ['suggest', 'sug', 'report', 'reportar', 'invite', 'speedtest', 'stest', 'fixmsg', 'ds', 'script', 'sc']
+handler.command = ['suggest', 'sug', 'report', 'reportar', 'invite', 'speedtest', 'stest', 'fixmsg', 'ds']
 
 export default handler
