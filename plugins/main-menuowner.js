@@ -30,25 +30,25 @@ let handler = async (m, { conn, args }) => {
 │ ➣ Comandos: ${totalCommands}
 │ ➢ Fecha: ${moment().tz('America/Mexico_City').format('DD/MM/YYYY')}
 │ ➣ Hora: ${moment().tz('America/Mexico_City').format('HH:mm:ss')}
-│ ➢ Servidor: México
+│ ➢ Servidor: Oculto
 │ ➣ Ping: Online 
-│ ➢ Memoria: Estable
+│ ➢ Memoria: Oculta
 │ ➣ Modo: Privado 
 ╰───────────────╯                                                                                                                                                                                                                                                                                                                                                                                                                    
 
-═══ COMANDOS DE OWNER ═══
+═══ 𝖢𝖮𝖬𝖠𝖭𝖣𝖮𝖲 𝖣𝖤 𝖮𝖶𝖭𝖤𝖱 ═══
 
-◎ *GESTIÓN OWNERS*
+◎ *𝖦𝖤𝖲𝖳𝖨𝖮́𝖭 𝖮𝖶𝖭𝖤𝖱𝖲*
 • #addowner • #delowner
 • #codigo
 
-◎ *ARCHIVOS*
+◎ *𝖠𝖱𝖢𝖧𝖨𝖵𝖮𝖲*
 • #backup • #copia
 • #cleanfiles • #dsowner
 • #cleartmp • #vaciartmp
 • #deletefile
 
-◎ *ECONOMÍA*
+◎ *𝖤𝖢𝖮𝖭𝖮𝖬𝖨́𝖠*
 • #addcoins • #añadircoin
 • #userpremium • #addprem
 • #delprem • #remove
@@ -57,44 +57,44 @@ let handler = async (m, { conn, args }) => {
 • #deletedatauser • #resetuser
 • #removexp • #quitarxp
 
-◎ *COMUNICACIÓN*
+◎ *𝖢𝖮𝖬𝖴𝖭𝖨𝖢𝖠𝖢𝖨𝖮́𝖭*
 • #bcgc • #let
 • #reunion • #meeting
 
-◎ *SISTEMA DE BANEOS*
-┌─ ◍ Solo Fernando:
+◎ *𝖲𝖨𝖲𝖳𝖤𝖬𝖠 𝖣𝖤 𝖡𝖠𝖭𝖤𝖮𝖲*
+┌─ ◍ 𝖲𝗈𝗅𝗈 𝖭𝗎𝗅𝗅:
 │ • #banned [usuario] [tiempo] [razón]
 │ • #unban [usuario]
-├─ ◍ Todos los usuarios:
+├─ ◍ 𝖳𝗈𝖽𝗈𝗌 𝗅𝗈𝗌 𝗎𝗌𝗎𝖺𝗋𝗂𝗈𝗌:
 │ • #horaban
-└─ ◍ Owners:
+└─ ◍ 𝖮𝗐𝗇𝖾𝗋𝗌:
   • #checkban [usuario]
   • #banlist
   • #block [usuario]
   • #unblock [usuario]
   • #blocklist
 
-*Ejemplos de uso:*
+*𝖤𝗃𝖾𝗆𝗉𝗅𝗈𝗌 𝖽𝖾 𝗎𝗌𝗈:*
 • #banned @user 7d Spam
 • #banned 521234567890 2h 30m Mal comportamiento
 • #banned @user Permanente
 • #unban @user
 • #horaban (ver tu tiempo de baneo)
 
-◎ *ADMIN AUTO*
+◎ *𝖠𝖣𝖬𝖨𝖭 𝖠𝖴𝖳𝖮*
 • #autoadmin
 
-◎ *GRUPOS*
+◎ *𝖦𝖱𝖴𝖯𝖮𝖲*
 • #newgc • #creargc
 • #grouplist • #listgroup
 • #join • #invite
 • #leave • #salir
 
-◎ *WEB*
+◎ *𝖶𝖤𝖡*
 • #get • #fetch
 • #plugin • #getplugin
 
-◎ *CONFIGURACIÓN*
+◎ *𝖢𝖮𝖭𝖥𝖨𝖦𝖴𝖱𝖠𝖢𝖨𝖮́𝖭*
 • #prefix • #resetprefix
 • #reiniciar • #restart
 • #setbanner • #setavatar
@@ -103,7 +103,7 @@ let handler = async (m, { conn, args }) => {
 • #setbio2 • #setstatus2
 • #update
 
-◎ *COMANDOS CUSTOM*
+◎ *𝖢𝖮𝖬𝖠𝖭𝖣𝖮𝖲 𝖢𝖴𝖲𝖳𝖮𝖬*
 • #addcmd • #setcmd
 • #delcmd • #cmdlist
 • #listcmd • #editarplugin
@@ -115,7 +115,7 @@ let handler = async (m, { conn, args }) => {
 │ ◍ Usa con responsabilidad
 │ ◍ Sistema de baneos mejorado
 │ ◍ Soporta baneos temporales
-╰────── ◍ OWNER ◍
+╰────── ◍ 𝖮𝖶𝖭𝖤𝖱 ◍
 `
 
     try {
