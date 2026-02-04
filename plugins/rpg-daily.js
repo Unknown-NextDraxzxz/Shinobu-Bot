@@ -41,7 +41,7 @@ var handler = async (m, { conn, usedPrefix }) => {
     let nextReward = Math.min(20000 + user.streak * 5000, 1015000).toLocaleString()
 
     // Mensaje rediseñado ASTA-BOT
-    let msg = `╭━〔ꕤ *RECOMPENSA DIARIA* ꕤ〕━╮
+    let msg = `╭━〔ꕤ *𝖱𝖤𝖢𝖮𝖬𝖯𝖤𝖭𝖲𝖠 𝖣𝖨𝖠𝖱𝖨𝖠* ꕤ〕━╮
  ┃
  ┃ ◎ Has reclamado tu Daily de hoy
  ┃ ◎ Recompensa: *¥${reward.toLocaleString()} ${currency}*
