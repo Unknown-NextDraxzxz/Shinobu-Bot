@@ -1,16 +1,16 @@
 let handler = async (m, { conn }) => {
     // Lista de links: hasta 10
     const grupos = [
-        { link: "https://chat.whatsapp.com/JOqvrvQNrIY7yrDTVN1J4j" }, // Grupo 1
-        { link: "https://chat.whatsapp.com/GR99nLM3meCIhw9UY7EUMm" }, // Grupo 2
-        { link: "https://chat.whatsapp.com/FW4JA6D0NQU79KVPpTrW19" }, // Grupo 3
-        { link: "https://chat.whatsapp.com/BE381ctvpcbLs5vQhehR5v" }, // Grupo 4
-        { link: "https://chat.whatsapp.com/KKwDZn5vDAE6MhZFAcVQeO" }, // Grupo 5
-        { link: "https://chat.whatsapp.com/Gc5e3kDQA1iD1nGeMe1JcC" }, // Grupo 6
-        { link: "https://chat.whatsapp.com/FhumMhhjTcuHNRZAAlntus" }, // Grupo 7
-        { link: "https://chat.whatsapp.com/BVqd5Fz3H5q85QuLUiBpEs" }, // Grupo 8
-        { link: "https://chat.whatsapp.com/FDEc5AtSe0G3SC6fsJmd5m" }, // Grupo 9
-        { link: "https://chat.whatsapp.com/BfCKeP10yZZ9ancsGy1Eh9" }  // Grupo 10
+        { link: "https://chat.whatsapp.com/DI8aRRIXmmRKC3cUn9R0Hv?mode=gi_t" }, // Grupo 1
+        { link: "https://chat.whatsapp.com/DI8aRRIXmmRKC3cUn9R0Hv?mode=gi_t" }, // Grupo 2
+        { link: "https://chat.whatsapp.com/DI8aRRIXmmRKC3cUn9R0Hv?mode=gi_t" }, // Grupo 3
+        { link: "https://chat.whatsapp.com/DI8aRRIXmmRKC3cUn9R0Hv?mode=gi_t" }, // Grupo 4
+        { link: "https://chat.whatsapp.com/DI8aRRIXmmRKC3cUn9R0Hv?mode=gi_t" }, // Grupo 5
+        { link: "https://chat.whatsapp.com/DI8aRRIXmmRKC3cUn9R0Hv?mode=gi_t" }, // Grupo 6
+        { link: "https://chat.whatsapp.com/DI8aRRIXmmRKC3cUn9R0Hv?mode=gi_t" }, // Grupo 7
+        { link: "https://chat.whatsapp.com/DI8aRRIXmmRKC3cUn9R0Hv?mode=gi_t" }, // Grupo 8
+        { link: "https://chat.whatsapp.com/DI8aRRIXmmRKC3cUn9R0Hv?mode=gi_t" }, // Grupo 9
+        { link: "https://chat.whatsapp.com/DI8aRRIXmmRKC3cUn9R0Hv?mode=gi_t" }  // Grupo 10
     ];
 
     let mensaje = `╔══❖ COMUNIDADES DE ${conn.user.name.toUpperCase()} ❖══╗\n`;
