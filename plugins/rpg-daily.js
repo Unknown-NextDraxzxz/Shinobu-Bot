@@ -18,7 +18,7 @@ var handler = async (m, { conn, usedPrefix }) => {
     // Comprobar si ya reclamó el daily
     if (now < user.lastDaily) {
         let wait = formatTime(Math.floor((user.lastDaily - now) / 1000))
-        return conn.reply(m.chat, `⚠️ Ya has reclamado tu *Daily* de hoy.\n> Puedes reclamarlo de nuevo en *${wait}*`, m)
+        return conn.reply(m.chat, `✎ Ya has reclamado tu *Daily* de hoy.\n> Puedes reclamarlo de nuevo en *${wait}*`, m)
     }
 
     // Comprobar si perdió racha
@@ -41,13 +41,13 @@ var handler = async (m, { conn, usedPrefix }) => {
     let nextReward = Math.min(20000 + user.streak * 5000, 1015000).toLocaleString()
 
     // Mensaje rediseñado ASTA-BOT
-    let msg = `╭━〔💰 *RECOMPENSA DIARIA* 💰〕━╮
+    let msg = `╭━〔ꕤ *RECOMPENSA DIARIA* ꕤ〕━╮
  ┃
- ┃ ✅ Has reclamado tu Daily de hoy
- ┃ 💸 Recompensa: *¥${reward.toLocaleString()} ${currency}*
- ┃ 🗓 Día: *${user.streak}*
+ ┃ ◎ Has reclamado tu Daily de hoy
+ ┃ ◎ Recompensa: *¥${reward.toLocaleString()} ${currency}*
+ ┃ ◎ Día: *${user.streak}*
  ┃
- ┃ 🔹 Próximo día: *+¥${nextReward}*
+ ┃ ◎ Próximo día: *+¥${nextReward}*
 ${lost ? ' ┃ ⚠ ¡Has perdido tu racha de días! ⚠' : ''}
  ╰━━━━━━━━━━━━━━━╯`
 
