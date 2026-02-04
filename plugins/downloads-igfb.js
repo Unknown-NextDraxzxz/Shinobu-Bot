@@ -187,10 +187,10 @@ const handler = async (m, { args, conn, usedPrefix }) => {
             try {
                 if (media.type === 'image') {
                     await conn.sendFile(m.chat, media.url, 'instagram.jpg', 
-                        `📸 *Instagram Download*\n${mediaUrls.length > 1 ? `(${i + 1}/${mediaUrls.length})` : ''}\n\n✨ Descargado por ASTA-BOT`, m)
+                        `📸 *Instagram Download*\n${mediaUrls.length > 1 ? `(${i + 1}/${mediaUrls.length})` : ''}\n\n✨ Descargado por Shinobu-Bot`, m)
                 } else {
                     await conn.sendFile(m.chat, media.url, 'instagram.mp4', 
-                        `🎬 *Instagram Download*\n${mediaUrls.length > 1 ? `(${i + 1}/${mediaUrls.length})` : ''}\n\n✨ Descargado por ASTA-BOT`, m)
+                        `🎬 *Instagram Download*\n${mediaUrls.length > 1 ? `(${i + 1}/${mediaUrls.length})` : ''}\n\n✨ Descargado por Shinobu-Bot`, m)
                 }
                 sentCount++
                 
