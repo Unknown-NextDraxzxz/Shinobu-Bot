@@ -24,9 +24,9 @@ async function generarBienvenida({ conn, userId, groupMetadata, chat }) {
     } else {
         console.log('[DEBUG] Usando mensaje predeterminado')
         // USAR MENSAJE PREDETERMINADO
-        mensajeFinal = `╭━〔👑 *ASTA-BOT 👑 〕* 
+        mensajeFinal = `╭━〔ꕤ *𝖲𝗁𝗂𝗇𝗈𝖻𝗎-𝖡𝗈𝗍 ꕤ 〕* 
  ┋ 
- ┋「 🎉 *¡BIENVENIDO/A! 👋 」* 
+ ┋「 ◍ *¡BIENVENIDO/A! ◍ 」* 
  ┋ 
  ┋ 「 *${groupMetadata.subject}* 」 
  ┋ 
@@ -63,15 +63,15 @@ async function generarDespedida({ conn, userId, groupMetadata, chat }) {
     } else {
         console.log('[DEBUG] Usando mensaje predeterminado (despedida)')
         // USAR MENSAJE PREDETERMINADO
-        mensajeFinal = `╭━〔👑 *ASTA-BOT 👑 〕* 
+        mensajeFinal = `╭━〔ꕤ *𝖲𝗁𝗂𝗇𝗈𝖻𝗎-𝖡𝗈𝗍 ꕤ 〕* 
  ┋ 
- ┋「 😢 *¡ADIOS! 👋 」* 
+ ┋「 ◍ *¡ADIOS! ◍ 」* 
  ┋ 
  ┋ 「 *${groupMetadata.subject}* 」 
  ┋ 
  ╰━★ 「 ${username} 」 
  *╭━━━━━━ * 
- ┋❖ Un miembro menos 😢
+ ┋❖ Un miembro menos 
  ┋❀ Te extrañaremos en el grupo * 
  ┋❖ Ahora somos ${groupSize} miembros
  ┗━━━━━━━━━━━━━━━┅ ⳹`
