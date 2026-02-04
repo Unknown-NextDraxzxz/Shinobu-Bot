@@ -52,7 +52,7 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
                         text: result.title || '📱 Video de TikTok'
                     }),
                     footer: proto.Message.InteractiveMessage.Footer.fromObject({ 
-                        text: 'Asta Bot' 
+                        text: 'Shinobu-Bot' 
                     }),
                     header: proto.Message.InteractiveMessage.Header.fromObject({
                         title: '',
@@ -86,7 +86,7 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
                             text: `🎯 Resultados: ${text}\n📊 ${results.length} videos` 
                         }),
                         footer: proto.Message.InteractiveMessage.Footer.create({ 
-                            text: '⚡ Asta Bot ⚡' 
+                            text: 'Shinobu-Bot' 
                         }),
                         header: proto.Message.InteractiveMessage.Header.create({ 
                             title: '🎥 TikTok Search',
