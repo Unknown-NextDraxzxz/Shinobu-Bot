@@ -193,7 +193,7 @@ const handler = async (m, { conn, text, usedPrefix, command, args, isROwner, isO
 
         switch (command) {
             case 'banned': {
-                if (!who) return conn.reply(m.chat, `❌ *ASTA-BOT* ❌\n> Por favor, etiqueta, cita o escribe el número del usuario que quieres banear del Bot.\n\n*Uso:*\n${usedPrefix}banned @usuario [tiempo] [razón]\n${usedPrefix}banned 521234567890 [tiempo] [razón]\n\n*Ejemplos:*\n${usedPrefix}banned @user 7d Spam\n${usedPrefix}banned 521234567890 2h 30m Mal comportamiento\n${usedPrefix}banned @user 1mes 3d 5h Advertencia\n${usedPrefix}banned @user Permanente`, m)
+                if (!who) return conn.reply(m.chat, `❌ *Shinobu-Bot* ❌\n> Por favor, etiqueta, cita o escribe el número del usuario que quieres banear del Bot.\n\n*Uso:*\n${usedPrefix}banned @usuario [tiempo] [razón]\n${usedPrefix}banned 521234567890 [tiempo] [razón]\n\n*Ejemplos:*\n${usedPrefix}banned @user 7d Spam\n${usedPrefix}banned 521234567890 2h 30m Mal comportamiento\n${usedPrefix}banned @user 1mes 3d 5h Advertencia\n${usedPrefix}banned @user Permanente`, m)
 
                 if (who === conn.user.jid) {
                     return conn.reply(m.chat, `⚠️ @${bot} no puede ser baneado.`, m, { mentions: [who] })
@@ -288,7 +288,7 @@ const handler = async (m, { conn, text, usedPrefix, command, args, isROwner, isO
             }
 
             case 'unban': {
-                if (!who) return conn.reply(m.chat, `❌ *ASTA-BOT* ❌\n> Por favor, etiqueta o coloca el número del usuario que quieres desbanear del Bot.\n\n*Ejemplos:*\n${usedPrefix}unban @usuario\n${usedPrefix}unban 521234567890`, m)
+                if (!who) return conn.reply(m.chat, `❌ *Shinobu-Bot* ❌\n> Por favor, etiqueta o coloca el número del usuario que quieres desbanear del Bot.\n\n*Ejemplos:*\n${usedPrefix}unban @usuario\n${usedPrefix}unban 521234567890`, m)
                 if (!users[who]) return conn.reply(m.chat, '❗ El usuario no está registrado.', m)
                 if (!users[who].banned) return conn.reply(m.chat, `⚠️ @${who.split('@')[0]} no está baneado.`, m, { mentions: [who] })
 
@@ -327,7 +327,7 @@ const handler = async (m, { conn, text, usedPrefix, command, args, isROwner, isO
             }
 
             case 'checkban': {
-                if (!who) return conn.reply(m.chat, `❌ *ASTA-BOT* ❌\n> Por favor, etiqueta o coloca el número del usuario que quieres verificar.\n\n*Ejemplos:*\n${usedPrefix}checkban @usuario\n${usedPrefix}checkban 521234567890`, m)
+                if (!who) return conn.reply(m.chat, `❌ *Shinobu-Bot* ❌\n> Por favor, etiqueta o coloca el número del usuario que quieres verificar.\n\n*Ejemplos:*\n${usedPrefix}checkban @usuario\n${usedPrefix}checkban 521234567890`, m)
                 if (!users[who] || !users[who].banned) {
                     return conn.reply(m.chat, `✅ @${who.split('@')[0]} no está baneado.`, m, { mentions: [who] })
                 }
@@ -369,7 +369,7 @@ const handler = async (m, { conn, text, usedPrefix, command, args, isROwner, isO
             }
 
             case 'block': {
-                if (!who) return conn.reply(m.chat, `❌ *ASTA-BOT* ❌\n> Por favor, menciona al usuario que quieres bloquear del número de la Bot.`, m)
+                if (!who) return conn.reply(m.chat, `❌ *Shinobu-Bot* ❌\n> Por favor, menciona al usuario que quieres bloquear del número de la Bot.`, m)
                 
                 if (isProtectedUser(who)) {
                     return conn.reply(m.chat, `⚠️ No puedes bloquear a @${who.split('@')[0]} porque es Global Owner o ROwner.`, m, { mentions: [who] })
@@ -385,7 +385,7 @@ const handler = async (m, { conn, text, usedPrefix, command, args, isROwner, isO
             }
 
             case 'unblock': {
-                if (!who) return conn.reply(m.chat, `❌ *ASTA-BOT* ❌\n> Por favor, menciona al usuario que quieres desbloquear del número de la Bot.`, m)
+                if (!who) return conn.reply(m.chat, `❌ *Shinobu-Bot* ❌\n> Por favor, menciona al usuario que quieres desbloquear del número de la Bot.`, m)
                 await m.react('🕒')
                 await conn.updateBlockStatus(who, 'unblock')
                 await m.react('✅')
