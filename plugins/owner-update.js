@@ -16,7 +16,7 @@ let handler = async (m, { conn, usedPrefix, text }) => {
     const { sendMessage } = conn;
     
     // Mensaje de inicio
-    let { key } = await sendMessage(m.chat, { text: `🔄 *Actualizando bot desde rama: ${rama}...*` }, { quoted: m });
+    let { key } = await sendMessage(m.chat, { text: `◎ *Actualizando bot desde rama: ${rama}...*` }, { quoted: m });
 
     // 2. Ejecutar comandos de Git de forma secuencial
     // git fetch: busca cambios
