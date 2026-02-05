@@ -36,7 +36,7 @@ let handler = async (m, { conn, usedPrefix, text }) => {
 
     // 4. Mensaje de éxito
     await sendMessage(m.chat, { 
-      text: `✅ *ACTUALIZACIÓN EXITOSA*\n\n🌿 *Rama:* \`${rama}\`\n\nEl bot se reiniciará en 5 segundos para aplicar los cambios. Si no vuelve, hazlo manualmente.`,
+      text: `✎ *𝖠𝖼𝗍𝗎𝖺𝗅𝗂𝗓𝖺𝖼𝗂𝗈́𝗇 𝖤𝗑𝗂𝗍𝗈𝗌𝖺*\n\nꕤ *Rama:* \`${rama}\`\n\nEl bot se reiniciará en 5 segundos para aplicar los cambios. Si no vuelve, hazlo manualmente.`,
       edit: key 
     });
 
