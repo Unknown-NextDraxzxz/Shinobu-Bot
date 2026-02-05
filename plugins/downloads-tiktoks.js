@@ -31,10 +31,10 @@ await m.react('✖️')
 await conn.reply(m.chat, `⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${e.message}`, m)
 }}
 function createCaption(title, author, duration, created_at = '') {
-  return `*🎬 Título ›* \`${title || 'No disponible'}\`  |  👤 *Autor ›* ${author?.nickname || author?.unique_id || 'No disponible'}  |  ⏱ *Duración ›* ${duration || 'No disponible'}s${created_at ? `  |  📅 Creado › ${created_at}` : ''}  |  🎵 *Música ›* [${author?.nickname || author?.unique_id || 'No disponible'}] original sound - ${author?.unique_id || 'unknown'}`
+  return `*✎ Título ›* \`${title || 'No disponible'}\`  |  ✧ *Autor ›* ${author?.nickname || author?.unique_id || 'No disponible'}  |  ꕤ *Duración ›* ${duration || 'No disponible'}s${created_at ? `  |  ◎ Creado › ${created_at}` : ''}  |  ❒ *Música ›* [${author?.nickname || author?.unique_id || 'No disponible'}] original sound - ${author?.unique_id || 'unknown'}`
 }
 function createSearchCaption(data) {
-  return `*🎬 Título ›* ${data.title || 'No disponible'}  |  👤 *Autor ›* ${data.author?.nickname || 'Desconocido'}${data.author?.unique_id ? ` (@${data.author.unique_id})` : ''}  |  ⏱ *Duración ›* ${data.duration || 'No disponible'}  |  🎵 *Música ›* ${data.music?.title || `[${data.author?.nickname || 'No disponible'}] original sound - ${data.author?.unique_id || 'unknown'}`}`
+  return `*✎ Título ›* ${data.title || 'No disponible'}  |  ✧ *Autor ›* ${data.author?.nickname || 'Desconocido'}${data.author?.unique_id ? ` (@${data.author.unique_id})` : ''}  |  ꕤ *Duración ›* ${data.duration || 'No disponible'}  |  ❒ *Música ›* ${data.music?.title || `[${data.author?.nickname || 'No disponible'}] original sound - ${data.author?.unique_id || 'unknown'}`}`
 }
 
 handler.help = ['tiktok', 'tt']
