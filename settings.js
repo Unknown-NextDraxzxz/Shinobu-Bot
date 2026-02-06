@@ -43,8 +43,8 @@ global.dev = "Powered By ᴍᴀʏᴇʀs"
 global.author = "sʜɪɴᴏʙᴜ - ʙᴏᴛ • Powered By ᴍᴀʏᴇʀs"
 global.etiqueta = "ᴍᴀʏᴇʀs"
 global.currency = "¥enes"
-global.banner = "https://github.com/Fer280809/Asta_bot/blob/main/lib%2Fcatalogo.jpg"
-global.icono = "https://github.com/Fer280809/Asta_bot/blob/main/lib%2Fcatalogo.jpg"
+global.banner = "https://github.com/shinobu-bot/blob/main/lib%2Fcatalogo.jpg"
+global.icono = "https://github.com/shinobu-bot/blob/main/lib%2Fcatalogo.jpg"
 global.catalogo = fs.readFileSync('./lib/catalogo.jpg')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
@@ -67,7 +67,7 @@ vreden: { url: "https://api.vreden.web.id", key: null },
 delirius: { url: "https://api.delirius.store", key: null },
 zenzxz: { url: "https://api.zenzxz.my.id", key: null },
 siputzx: { url: "https://api.siputzx.my.id", key: null },
-adonix: { url: "https://api-adonix.ultraplus.click", key: 'Destroy-xyz' }
+adonix: { url: "https://api-adonix.ultraplus.click", key: 'apikey' }
 }
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
