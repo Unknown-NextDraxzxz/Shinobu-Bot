@@ -43,8 +43,8 @@ global.dev = "Powered By ᴍᴀʏᴇʀs"
 global.author = "sʜɪɴᴏʙᴜ - ʙᴏᴛ • Powered By ᴍᴀʏᴇʀs"
 global.etiqueta = "ᴍᴀʏᴇʀs"
 global.currency = "¥enes"
-global.banner = "https://github.com/shinobu-bot/blob/main/lib%2Fcatalogo.jpg"
-global.icono = "https://github.com/shinobu-bot/blob/main/lib%2Fcatalogo.jpg"
+global.banner = "'https://cdn.russellxz.click/a1dfd509.jpg"
+global.icono = "'https://cdn.russellxz.click/a1dfd509.jpg"
 global.catalogo = fs.readFileSync('./lib/catalogo.jpg')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
