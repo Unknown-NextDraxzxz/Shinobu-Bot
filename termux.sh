@@ -2,7 +2,7 @@
 # Código desarrollado por @Asta_bot - VERSIÓN ACTUALIZADA SEGURA
 
 BOT_DIR="Shinobu-Bot"
-BOT_REPO="https://github.com/Fer280809/Asta_bot.git"
+BOT_REPO="https://github.com/Unknown-NextDraxzxz/Shinobu-Bot.git"
 DB_FILE="database.json"
 
 # Colores estilo Index.js
