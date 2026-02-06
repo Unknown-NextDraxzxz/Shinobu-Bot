@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # Código desarrollado por @Asta_bot - VERSIÓN ACTUALIZADA SEGURA
 
-BOT_DIR="Asta_bot"
+BOT_DIR="Shinobu-Bot"
 BOT_REPO="https://github.com/Fer280809/Asta_bot.git"
 DB_FILE="database.json"
 
@@ -16,7 +16,7 @@ RESET='\033[0m'
 
 echo -e "${BOLD}${MAGENTA}"
 echo "╔═══════════════════════════════════╗"
-echo "║    🔄 ACTUALIZANDO ASTA BOT 🔄    ║"
+echo "║    🔄 ACTUALIZANDO Shinobu bot 🔄    ║"
 echo "╚═══════════════════════════════════╝${RESET}"
 echo ""
 
