@@ -37,7 +37,7 @@ if ((m.id.startsWith("3EB0") || (m.id.startsWith("BAE5") && m.id.length === 16) 
   const rawPrefijo = global.db.data.settings[idDD].prefijo || ''
   const prefas = Array.isArray(rawPrefijo) ? rawPrefijo : rawPrefijo ? [rawPrefijo] : ['#', '/', '.'] || ['#', '/', '.']
 
-const rawBotname = global.db.data.settings[idDD].namebot2 || 'Alya'
+const rawBotname = global.db.data.settings[idDD].namebot2 || 'Nezuko'
 const tipo = global.db.data.settings[idDD].type || 'Sub'
 
 const isValidBotname = /^[\w\s]+$/.test(rawBotname)
